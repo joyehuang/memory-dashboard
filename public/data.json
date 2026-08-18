@@ -1,46 +1,46 @@
 {
- "generatedAt": "2026-08-18 14:32:01",
+ "generatedAt": "2026-08-19 09:00:03",
  "totals": {
   "pi": {
-   "tokens": 286897306,
-   "cost": 15.2768,
-   "turns": 2062,
-   "sessions": 25,
-   "input": 3131223,
-   "output": 969923,
-   "cacheRead": 282796160,
-   "reasoning": 475920,
-   "costIn": 5.7444,
-   "costOut": 1.8311,
-   "costCache": 7.7013,
-   "cacheRate": 98.9
+   "tokens": 381217673,
+   "cost": 15.6368,
+   "turns": 2427,
+   "sessions": 26,
+   "input": 3579814,
+   "output": 1094115,
+   "cacheRead": 376543744,
+   "reasoning": 512051,
+   "costIn": 5.8072,
+   "costOut": 1.8658,
+   "costCache": 7.9638,
+   "cacheRate": 99.1
   },
   "claude": {
-   "tokens": 189867726,
-   "turns": 1784,
-   "sessions": 26,
-   "input": 102511,
-   "output": 1900981,
-   "cacheRead": 182046143,
-   "cacheWrite": 5818091,
-   "cacheRate": 99.9
+   "tokens": 220207250,
+   "turns": 2076,
+   "sessions": 42,
+   "input": 103111,
+   "output": 2266950,
+   "cacheRead": 211061980,
+   "cacheWrite": 6775209,
+   "cacheRate": 100.0
   },
   "mem0": {
    "entries": 32
   },
   "memoryMd": {
-   "lines": 24,
-   "chars": 4006
+   "lines": 0,
+   "chars": 0
   },
   "herdr": {
-   "calls": 44,
-   "cost": 1.1211,
-   "errors": 0,
+   "calls": 131,
+   "cost": 6.4686,
+   "errors": 1,
    "sessions": 1,
    "teamRuns": 0,
    "teamActive": 0,
-   "avgDurationSec": 22.6,
-   "errorRate": 0.0
+   "avgDurationSec": 25.0,
+   "errorRate": 0.8
   }
  },
  "daily": {
@@ -143,18 +143,32 @@
    "cacheRate": 99.9
   },
   "2026-08-18": {
-   "input": 300689,
-   "output": 96173,
-   "cacheRead": 41043840,
+   "input": 651813,
+   "output": 168905,
+   "cacheRead": 113833600,
    "cacheWrite": 0,
-   "reasoning": 26565,
-   "tokens": 41440702,
-   "cost": 0.18394765199999996,
-   "costIn": 0.04209645999999998,
-   "costOut": 0.026928439999999998,
-   "costCache": 0.11492275199999999,
-   "turns": 250,
-   "cacheRate": 99.3
+   "reasoning": 36099,
+   "tokens": 114654318,
+   "cost": 0.4572812999999997,
+   "costIn": 0.09125381999999996,
+   "costOut": 0.04729340000000004,
+   "costCache": 0.31873407999999975,
+   "turns": 485,
+   "cacheRate": 99.4
+  },
+  "2026-08-19": {
+   "input": 97467,
+   "output": 51460,
+   "cacheRead": 20957824,
+   "cacheWrite": 0,
+   "reasoning": 26597,
+   "tokens": 21106751,
+   "cost": 0.0867360872,
+   "costIn": 0.013645380000000006,
+   "costOut": 0.014408800000000003,
+   "costCache": 0.0586819072,
+   "turns": 130,
+   "cacheRate": 99.5
   }
  },
  "claudeDaily": {
@@ -204,22 +218,22 @@
    "cacheRate": 100.0
   },
   "2026-08-18": {
-   "input": 260,
-   "output": 162473,
-   "cacheRead": 12027522,
-   "cacheWrite": 315521,
-   "tokens": 12505776,
-   "turns": 130,
+   "input": 860,
+   "output": 528442,
+   "cacheRead": 41043359,
+   "cacheWrite": 1272639,
+   "tokens": 42845300,
+   "turns": 422,
    "cacheRate": 100.0
   }
  },
  "models": {
   "deepseek-v4-flash": {
-   "tokens": 267532444,
-   "cost": 1.2143899207999986,
-   "calls": 1838,
-   "cacheRead": 264999936,
-   "input": 1690801,
+   "tokens": 361852811,
+   "cost": 1.5744596559999977,
+   "calls": 2203,
+   "cacheRead": 358747520,
+   "input": 2139392,
    "cacheRate": 99.4
   },
   "gpt-5.6-sol": {
@@ -265,10 +279,10 @@
  },
  "claudeModels": {
   "claude-opus-5": {
-   "tokens": 172267621,
-   "calls": 1493,
-   "input": 101950,
-   "cacheRead": 165703882,
+   "tokens": 201126383,
+   "calls": 1750,
+   "input": 102464,
+   "cacheRead": 193627579,
    "cacheRate": 99.9
   },
   "claude-fable-5": {
@@ -279,11 +293,18 @@
    "cacheRate": 100.0
   },
   "claude-sonnet-5": {
-   "tokens": 7064618,
-   "calls": 116,
-   "input": 232,
-   "cacheRead": 6659303,
+   "tokens": 8492362,
+   "calls": 149,
+   "input": 298,
+   "cacheRead": 7715175,
    "cacheRate": 100.0
+  },
+  "claude-haiku-4-5-20251001": {
+   "tokens": 53018,
+   "calls": 2,
+   "input": 20,
+   "cacheRead": 36268,
+   "cacheRate": 99.9
   },
   "<synthetic>": {
    "tokens": 0,
@@ -313,6 +334,38 @@
   {
    "date": "2026-08-18",
    "text": "02:28 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: Cumora 源码留存 ~/dev/cumora 并写入长期记忆 | 下一步: 用户过两天体验时深入源码"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "02:32 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 排查完成：pi 02:31 重启、Telegram 已恢复；metabot WS 已重连 | 下一步: 可发测试消息验证 metabot 应答"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "02:35 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 确认无需测试 | 下一步: 待命，有新问题随时处理"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "03:02 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 找到 Block/Jack Dorsey《From Hierarchy to Intelligence》链接 | 下一步: 需要可讨论/总结该文内容"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "03:03 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 确认并重发 Block 官网原文链接 | 下一步: 需要可讨论该文观点"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "03:04 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 用纯裸 URL 重发原链接，避开格式干扰 | 下一步: 点击确认能否跳转"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "03:05 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 找到根因——"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "03:07 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 反思完成：认链接格式+理解偏差两个错，规则已入记忆、session search 提优先级 | 下一步: 落地 session search 工具"
+  },
+  {
+   "date": "2026-08-19",
+   "text": "03:12 `2026-08-18T16-31-21-931Z_01a015b6-934b-760a-8ad2-4eb1e06807a5.jsonl` 📌 状态: 发现并修复记忆文件分裂：合并注入源+规则置顶强指令 | 下一步: 重启 pi 使新注入生效"
   }
  ],
  "mem0Ops": {
@@ -326,17 +379,23 @@
    "duration_ms": 430414.0
   },
   "2026-08-18": {
-   "calls": 24,
-   "cost": 1.053941,
+   "calls": 99,
+   "cost": 5.042114999999999,
+   "errors": 1,
+   "duration_ms": 2694406.0
+  },
+  "2026-08-19": {
+   "calls": 12,
+   "cost": 1.3593879999999998,
    "errors": 0,
-   "duration_ms": 565244.0
+   "duration_ms": 148811.0
   }
  },
  "herdrBots": {
   "work": {
-   "calls": 44,
-   "cost": 1.121067,
-   "errors": 0
+   "calls": 131,
+   "cost": 6.468628999999999,
+   "errors": 1
   }
  }
 }
