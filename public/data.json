@@ -1,19 +1,19 @@
 {
- "generatedAt": "2026-08-18 13:42:45",
+ "generatedAt": "2026-08-18 14:27:30",
  "totals": {
   "pi": {
-   "tokens": 268992914,
-   "cost": 15.2188,
-   "turns": 1976,
+   "tokens": 279848324,
+   "cost": 15.2531,
+   "turns": 2030,
    "sessions": 25,
-   "input": 3114173,
-   "output": 950229,
-   "cacheRead": 264928512,
-   "reasoning": 474337,
-   "costIn": 5.742,
-   "costOut": 1.8256,
-   "costCache": 7.6513,
-   "cacheRate": 98.8
+   "input": 3124117,
+   "output": 959471,
+   "cacheRead": 275764736,
+   "reasoning": 474810,
+   "costIn": 5.7434,
+   "costOut": 1.8281,
+   "costCache": 7.6816,
+   "cacheRate": 98.9
   },
   "mem0": {
    "entries": 32
@@ -133,28 +133,28 @@
    "cacheRate": 99.9
   },
   "2026-08-18": {
-   "input": 283639,
-   "output": 76479,
-   "cacheRead": 23176192,
+   "input": 293583,
+   "output": 85721,
+   "cacheRead": 34012416,
    "cacheWrite": 0,
-   "reasoning": 24982,
-   "tokens": 23536310,
-   "cost": 0.12601691760000003,
-   "costIn": 0.03970945999999999,
-   "costOut": 0.021414119999999995,
-   "costCache": 0.0648933376,
-   "turns": 164,
-   "cacheRate": 98.8
+   "reasoning": 25455,
+   "tokens": 34391720,
+   "cost": 0.1603382648,
+   "costIn": 0.04110161999999997,
+   "costOut": 0.02400187999999999,
+   "costCache": 0.09523476480000001,
+   "turns": 218,
+   "cacheRate": 99.1
   }
  },
  "models": {
   "deepseek-v4-flash": {
-   "tokens": 249628052,
-   "cost": 1.1564591863999987,
-   "calls": 1752,
-   "cacheRead": 247132288,
-   "input": 1673751,
-   "cacheRate": 99.3
+   "tokens": 260483462,
+   "cost": 1.1907805335999984,
+   "calls": 1806,
+   "cacheRead": 257968512,
+   "input": 1683695,
+   "cacheRate": 99.4
   },
   "gpt-5.6-sol": {
    "tokens": 14933467,
