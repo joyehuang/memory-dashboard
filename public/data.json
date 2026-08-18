@@ -1,0 +1,246 @@
+{
+ "generatedAt": "2026-08-18 13:42:45",
+ "totals": {
+  "pi": {
+   "tokens": 268992914,
+   "cost": 15.2188,
+   "turns": 1976,
+   "sessions": 25,
+   "input": 3114173,
+   "output": 950229,
+   "cacheRead": 264928512,
+   "reasoning": 474337,
+   "costIn": 5.742,
+   "costOut": 1.8256,
+   "costCache": 7.6513,
+   "cacheRate": 98.8
+  },
+  "mem0": {
+   "entries": 32
+  },
+  "memoryMd": {
+   "lines": 23,
+   "chars": 3680
+  },
+  "herdr": {
+   "calls": 44,
+   "cost": 1.1211,
+   "errors": 0,
+   "sessions": 1,
+   "teamRuns": 0,
+   "teamActive": 0,
+   "avgDurationSec": 22.6,
+   "errorRate": 0.0
+  }
+ },
+ "daily": {
+  "2026-08-11": {
+   "input": 14009,
+   "output": 478,
+   "cacheRead": 0,
+   "cacheWrite": 0,
+   "reasoning": 157,
+   "tokens": 14487,
+   "cost": 0.0033754,
+   "costIn": 0.0028018,
+   "costOut": 0.0005736,
+   "costCache": 0.0,
+   "turns": 6,
+   "cacheRate": 0.0
+  },
+  "2026-08-12": {
+   "input": 1325952,
+   "output": 166560,
+   "cacheRead": 52464256,
+   "cacheWrite": 0,
+   "reasoning": 76252,
+   "tokens": 53956768,
+   "cost": 10.276765383200006,
+   "costIn": 4.451664899999987,
+   "costOut": 0.852602,
+   "costCache": 4.972498483200009,
+   "turns": 378,
+   "cacheRate": 97.5
+  },
+  "2026-08-13": {
+   "input": 1100539,
+   "output": 404162,
+   "cacheRead": 52772352,
+   "cacheWrite": 0,
+   "reasoning": 220727,
+   "tokens": 54277053,
+   "cost": 4.291103185999998,
+   "costIn": 1.1932065400000003,
+   "costOut": 0.8662473499999999,
+   "costCache": 2.231649296,
+   "turns": 715,
+   "cacheRate": 98.0
+  },
+  "2026-08-14": {
+   "input": 208708,
+   "output": 142903,
+   "cacheRead": 28184960,
+   "cacheWrite": 0,
+   "reasoning": 75507,
+   "tokens": 28536571,
+   "cost": 0.14814984800000008,
+   "costIn": 0.029219120000000005,
+   "costOut": 0.04001284000000004,
+   "costCache": 0.07891788799999999,
+   "turns": 353,
+   "cacheRate": 99.3
+  },
+  "2026-08-15": {
+   "input": 61151,
+   "output": 59523,
+   "cacheRead": 30209024,
+   "cacheWrite": 0,
+   "reasoning": 25305,
+   "tokens": 30329698,
+   "cost": 0.10981284720000002,
+   "costIn": 0.008561140000000004,
+   "costOut": 0.01666644,
+   "costCache": 0.08458526720000002,
+   "turns": 141,
+   "cacheRate": 99.8
+  },
+  "2026-08-16": {
+   "input": 14125,
+   "output": 8521,
+   "cacheRead": 5508096,
+   "cacheWrite": 0,
+   "reasoning": 3746,
+   "tokens": 5530742,
+   "cost": 0.019786048799999997,
+   "costIn": 0.0019775,
+   "costOut": 0.00238588,
+   "costCache": 0.015422668799999999,
+   "turns": 20,
+   "cacheRate": 99.7
+  },
+  "2026-08-17": {
+   "input": 106050,
+   "output": 91603,
+   "cacheRead": 72613632,
+   "cacheWrite": 0,
+   "reasoning": 47661,
+   "tokens": 72811285,
+   "cost": 0.2438140095999999,
+   "costIn": 0.014847,
+   "costOut": 0.02564883999999999,
+   "costCache": 0.20331816959999996,
+   "turns": 199,
+   "cacheRate": 99.9
+  },
+  "2026-08-18": {
+   "input": 283639,
+   "output": 76479,
+   "cacheRead": 23176192,
+   "cacheWrite": 0,
+   "reasoning": 24982,
+   "tokens": 23536310,
+   "cost": 0.12601691760000003,
+   "costIn": 0.03970945999999999,
+   "costOut": 0.021414119999999995,
+   "costCache": 0.0648933376,
+   "turns": 164,
+   "cacheRate": 98.8
+  }
+ },
+ "models": {
+  "deepseek-v4-flash": {
+   "tokens": 249628052,
+   "cost": 1.1564591863999987,
+   "calls": 1752,
+   "cacheRead": 247132288,
+   "input": 1673751,
+   "cacheRate": 99.3
+  },
+  "gpt-5.6-sol": {
+   "tokens": 14933467,
+   "cost": 13.839726999999998,
+   "calls": 119,
+   "cacheRead": 13799424,
+   "input": 1083251,
+   "cacheRate": 92.7
+  },
+  "gpt-5.6-luna": {
+   "tokens": 3040186,
+   "cost": 0.12505924,
+   "calls": 42,
+   "cacheRead": 2755072,
+   "input": 272179,
+   "cacheRate": 91.0
+  },
+  "deepseek-v4-pro": {
+   "tokens": 1391209,
+   "cost": 0.09757821399999998,
+   "calls": 60,
+   "cacheRead": 1241728,
+   "input": 84992,
+   "cacheRate": 93.6
+  },
+  "claude-opus-4-8": {
+   "tokens": 0,
+   "cost": 0.0,
+   "calls": 2,
+   "cacheRead": 0,
+   "input": 0,
+   "cacheRate": 0
+  },
+  "claude-fable-5": {
+   "tokens": 0,
+   "cost": 0.0,
+   "calls": 1,
+   "cacheRead": 0,
+   "input": 0,
+   "cacheRate": 0
+  }
+ },
+ "recaps": [
+  {
+   "date": "2026-08-18",
+   "text": "01:23 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 重启完成，Telegram 健康检查通过 | 下一步: 无，正常运行中"
+  },
+  {
+   "date": "2026-08-18",
+   "text": "01:23 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: Exa MCP 连接成功并实测搜索正常 | 下一步: 需要时直接用 exa 搜索/抓网页"
+  },
+  {
+   "date": "2026-08-18",
+   "text": "01:25 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 找回 exa/tavily 选型规则并补写入 skill | 下一步: 搜索时自动按场景选引擎"
+  },
+  {
+   "date": "2026-08-18",
+   "text": "01:44 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 拆解 agent 身份=执行+记忆+信任三支柱，钱包只解决其一 | 下一步: 可选：调研 agent identity 生态并出报告"
+  },
+  {
+   "date": "2026-08-18",
+   "text": "02:28 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: Cumora 源码留存 ~/dev/cumora 并写入长期记忆 | 下一步: 用户过两天体验时深入源码"
+  }
+ ],
+ "mem0Ops": {
+  "2026-08-15": 32
+ },
+ "herdrDaily": {
+  "2026-08-14": {
+   "calls": 20,
+   "cost": 0.067126,
+   "errors": 0,
+   "duration_ms": 430414.0
+  },
+  "2026-08-18": {
+   "calls": 24,
+   "cost": 1.053941,
+   "errors": 0,
+   "duration_ms": 565244.0
+  }
+ },
+ "herdrBots": {
+  "work": {
+   "calls": 44,
+   "cost": 1.121067,
+   "errors": 0
+  }
+ }
+}

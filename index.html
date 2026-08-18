@@ -1,161 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agent 记忆 & 使用数据仪表盘</title>
-<style>
-:root { --bg:#0f1115; --card:#171a21; --line:#262b36; --fg:#e6e9ef; --dim:#8b93a5; }
-* { box-sizing:border-box; margin:0; padding:0; }
-body { background:var(--bg); color:var(--fg); font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; padding:24px 16px 48px; }
-.wrap { max-width:1020px; margin:0 auto; }
-h1 { font-size:22px; margin-bottom:4px; }
-.sub { color:var(--dim); font-size:13px; margin-bottom:20px; }
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
-.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
-.card .v { font-size:21px; font-weight:700; }
-.card .l { color:var(--dim); font-size:12px; margin-top:2px; }
-.panel { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; margin-bottom:16px; }
-.panel h2 { font-size:15px; margin-bottom:12px; }
-.chart { width:100%; height:280px; }
-.chart-sm { width:100%; height:240px; }
-table { width:100%; border-collapse:collapse; font-size:13px; }
-th,td { text-align:left; padding:7px 10px; border-bottom:1px solid var(--line); }
-th { color:var(--dim); font-weight:600; font-size:12px; }
-.table-wrap { overflow-x:auto; }
-.note { color:var(--dim); font-size:12px; margin-top:10px; }
-</style>
-</head>
-<body><div class="wrap">
-<h1>🧠 Agent 记忆 & 使用数据</h1>
-<div class="sub">生成时间 2026-08-18 13:32 · 近 14 天 · pi sessions / recaps / memory.md / mem0 + herdr activity / sessions / agent-teams</div>
-
-<div class="cards">
-  <div class="card"><div class="v">267,443,348</div><div class="l">pi 累计 token</div></div>
-  <div class="card"><div class="v">$15.2127</div><div class="l">pi 累计成本</div></div>
-  <div class="card"><div class="v">98.8%</div><div class="l">cache hit rate</div></div>
-  <div class="card"><div class="v">$478.24</div><div class="l">cache 节省估算</div></div>
-  <div class="card"><div class="v">1968</div><div class="l">pi 轮次</div></div>
-  <div class="card"><div class="v">32</div><div class="l">mem0 记忆条目</div></div>
-  <div class="card"><div class="v">23</div><div class="l">memory.md 行数</div></div>
-  <div class="card"><div class="v">44</div><div class="l">herdr 活动事件</div></div>
-  <div class="card"><div class="v">$1.1211</div><div class="l">herdr 成本</div></div>
-  <div class="card"><div class="v">0.0%</div><div class="l">herdr 错误率</div></div>
-  <div class="card"><div class="v">22.6s</div><div class="l">herdr 平均时长</div></div>
-  <div class="card"><div class="v">1</div><div class="l">herdr 会话</div></div>
-</div>
-
-<div class="panel"><h2>每日 token 用量（input / output / cache）</h2><div id="tok-chart" class="chart"></div></div>
-<div class="panel"><h2>每日 cache hit rate</h2><div id="cache-chart" class="chart-sm"></div></div>
-<div class="panel"><h2>每日成本构成（input / output / cache）</h2><div id="cost-chart" class="chart"></div></div>
-<div class="panel"><h2>每日轮次 / recap / mem0 写入</h2><div id="multi-chart" class="chart"></div></div>
-<div class="panel"><h2>herdr 每日活动（调用 / 成本 / 错误）</h2><div id="herdr-chart" class="chart"></div></div>
-
-<div class="panel"><h2>模型分布（近 14 天）</h2>
-<div class="table-wrap"><table>
-<tr><th>模型</th><th>调用</th><th>token</th><th>cache rate</th><th>成本</th></tr>
-<tr><td>deepseek-v4-flash</td><td>1744</td><td>248,078,486</td><td>99.3%</td><td>$1.1503</td></tr><tr><td>gpt-5.6-sol</td><td>119</td><td>14,933,467</td><td>92.7%</td><td>$13.8397</td></tr><tr><td>gpt-5.6-luna</td><td>42</td><td>3,040,186</td><td>91.0%</td><td>$0.1251</td></tr><tr><td>deepseek-v4-pro</td><td>60</td><td>1,391,209</td><td>93.6%</td><td>$0.0976</td></tr><tr><td>claude-fable-5</td><td>1</td><td>0</td><td>0.0%</td><td>$0.0000</td></tr><tr><td>claude-opus-4-8</td><td>2</td><td>0</td><td>0.0%</td><td>$0.0000</td></tr>
-</table></div>
-</div>
-
-<div class="panel"><h2>herdr 各 bot</h2>
-<div class="table-wrap"><table>
-<tr><th>bot</th><th>调用</th><th>错误</th><th>成本</th></tr>
-<tr><td>work</td><td>44</td><td>0</td><td>$1.1211</td></tr>
-</table></div>
-</div>
-
-<div class="panel"><h2>最近 recap</h2>
-<div class="table-wrap"><table>
-<tr><th>日期</th><th>内容</th></tr>
-<tr><td>2026-08-18</td><td>01:23 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 重启完成，Telegram 健康检查通过 | 下一步: 无，正常运行中</td></tr><tr><td>2026-08-18</td><td>01:23 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: Exa MCP 连接成功并实测搜索正常 | 下一步: 需要时直接用 exa </td></tr><tr><td>2026-08-18</td><td>01:25 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 找回 exa/tavily 选型规则并补写入 skill | 下一步: 搜索</td></tr><tr><td>2026-08-18</td><td>01:44 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 拆解 agent 身份=执行+记忆+信任三支柱，钱包只解决其一 | 下一步:</td></tr><tr><td>2026-08-18</td><td>02:28 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: Cumora 源码留存 ~/dev/cumora 并写入长期记忆 | 下一步</td></tr>
-</table></div>
-</div>
-
-<p class="note">pi token 为 assistant usage.totalTokens。cache rate = cacheRead/(input+cacheRead)。cache 节省估算：cacheRead 按 input 单价计费时多花的钱。herdr 数据来自 ~/.metabot/*.db。</p>
-</div>
-
-<script src="vendor/echarts.min.js"></script>
-<script>
-const days = ["2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-15", "2026-08-16", "2026-08-17", "2026-08-18"];
-const tok = [0, 0, 0, 0, 0, 0, 14487, 53956768, 54277053, 28536571, 30329698, 5530742, 72811285, 21986744];
-const cost = [0, 0, 0, 0, 0, 0, 0.0034, 10.2768, 4.2911, 0.1481, 0.1098, 0.0198, 0.2438, 0.1199];
-const turn = [0, 0, 0, 0, 0, 0, 6, 378, 715, 353, 141, 20, 199, 156];
-const recap = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5];
-const mem0 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-const inTok = [0, 0, 0, 0, 0, 0, 14009, 1325952, 1100539, 208708, 61151, 14125, 106050, 281900];
-const outTok = [0, 0, 0, 0, 0, 0, 478, 166560, 404162, 142903, 59523, 8521, 91603, 70796];
-const crTok = [0, 0, 0, 0, 0, 0, 0, 52464256, 52772352, 28184960, 30209024, 5508096, 72613632, 21634048];
-const costIn = [0, 0, 0, 0, 0, 0, 0.0028, 4.4517, 1.1932, 0.0292, 0.0086, 0.002, 0.0148, 0.0395];
-const costOut = [0, 0, 0, 0, 0, 0, 0.0006, 0.8526, 0.8662, 0.04, 0.0167, 0.0024, 0.0256, 0.0198];
-const costCache = [0, 0, 0, 0, 0, 0, 0.0, 4.9725, 2.2316, 0.0789, 0.0846, 0.0154, 0.2033, 0.0606];
-const cacheRate = [0, 0, 0, 0, 0, 0, 0.0, 97.5, 98.0, 99.3, 99.8, 99.7, 99.9, 98.7];
-const hcall = [0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 24];
-const hcost = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0671, 0, 0, 0, 1.0539];
-const herr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-
-const AXIS = {
-  axisLine: { lineStyle: { color: '#3a4152' } },
-  axisLabel: { color: '#8b93a5' },
-  splitLine: { lineStyle: { color: '#1e2430' } }
-};
-
-function baseOpt(title) {
-  return {
-    backgroundColor: 'transparent',
-    tooltip: { trigger: 'axis' },
-    legend: { textStyle: { color: '#8b93a5' }, top: 0 },
-    grid: { left: 50, right: 16, top: 36, bottom: 28 },
-    xAxis: { type: 'category', data: days, ...AXIS },
-    yAxis: { type: 'value', ...AXIS },
-  };
-}
-
-// token 堆叠
-echarts.init(document.getElementById('tok-chart')).setOption({
-  ...baseOpt(),
-  series: [
-    { name: 'input', type: 'bar', stack: 't', data: inTok, itemStyle: { color: '#4f8cff' } },
-    { name: 'output', type: 'bar', stack: 't', data: outTok, itemStyle: { color: '#3fb950' } },
-    { name: 'cache', type: 'bar', stack: 't', data: crTok, itemStyle: { color: '#7c5cff' } }
-  ]
-});
-
-// cache rate 线
-echarts.init(document.getElementById('cache-chart')).setOption({
-  ...baseOpt(),
-  yAxis: { type: 'value', min: 0, max: 100, ...AXIS, axisLabel: { color: '#8b93a5', formatter: '{value}%' } },
-  series: [{ name: 'cache rate', type: 'line', data: cacheRate, smooth: true, areaStyle: { opacity: 0.15 }, itemStyle: { color: '#d29922' }, lineStyle: { color: '#d29922', width: 2 } }]
-});
-
-// 成本堆叠
-echarts.init(document.getElementById('cost-chart')).setOption({
-  ...baseOpt(),
-  series: [
-    { name: 'input $', type: 'bar', stack: 'c', data: costIn, itemStyle: { color: '#4f8cff' } },
-    { name: 'output $', type: 'bar', stack: 'c', data: costOut, itemStyle: { color: '#3fb950' } },
-    { name: 'cache $', type: 'bar', stack: 'c', data: costCache, itemStyle: { color: '#7c5cff' } }
-  ]
-});
-
-// 轮次/recap/mem0
-echarts.init(document.getElementById('multi-chart')).setOption({
-  ...baseOpt(),
-  series: [
-    { name: '轮次', type: 'bar', data: turn, itemStyle: { color: '#3fb950' } },
-    { name: 'recap', type: 'line', data: recap, smooth: true, itemStyle: { color: '#8b93a5' } },
-    { name: 'mem0 写入', type: 'line', data: mem0, smooth: true, itemStyle: { color: '#d29922' } }
-  ]
-});
-
-// herdr
-echarts.init(document.getElementById('herdr-chart')).setOption({
-  ...baseOpt(),
-  series: [
-    { name: '调用', type: 'bar', data: hcall, itemStyle: { color: '#7c5cff' } },
-    { name: '成本 $', type: 'line', data: hcost, smooth: true, itemStyle: { color: '#f0883e' } },
-    { name: '错误', type: 'line', data: herr, smooth: true, itemStyle: { color: '#f85149' } }
-  ]
-});
-</script>
-</div></body></html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f1115" />
+    <meta name="description" content="Agent 记忆与使用数据仪表盘 —— pi / herdr / mem0 全量趋势。" />
+    <title>Agent 记忆 &amp; 使用数据</title>
+    <style>
+      html { background: #0f1115; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
