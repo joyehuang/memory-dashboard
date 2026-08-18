@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent 记忆 & 使用数据仪表盘</title>
+<style>
+:root { --bg:#0f1115; --card:#171a21; --line:#262b36; --fg:#e6e9ef; --dim:#8b93a5; --acc:#4f8cff; --grn:#3fb950; --org:#f0883e; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--bg); color:var(--fg); font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; padding:24px 16px 48px; }
+.wrap { max-width:960px; margin:0 auto; }
+h1 { font-size:22px; margin-bottom:4px; }
+.sub { color:var(--dim); font-size:13px; margin-bottom:20px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.card .v { font-size:22px; font-weight:700; }
+.card .l { color:var(--dim); font-size:12px; margin-top:2px; }
+.panel { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px; margin-bottom:16px; }
+.panel h2 { font-size:15px; margin-bottom:12px; }
+svg { width:100%; height:auto; display:block; }
+.legend { display:flex; gap:16px; flex-wrap:wrap; color:var(--dim); font-size:12px; margin-top:8px; }
+.legend i { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { text-align:left; padding:7px 10px; border-bottom:1px solid var(--line); }
+th { color:var(--dim); font-weight:600; font-size:12px; }
+.table-wrap { overflow-x:auto; }
+.note { color:var(--dim); font-size:12px; margin-top:10px; }
+</style>
+</head>
+<body><div class="wrap">
+<h1>🧠 Agent 记忆 & 使用数据</h1>
+<div class="sub">生成时间 2026-08-18 13:25 · 近 14 天 · 数据源: pi sessions / recaps / memory.md / mem0 + herdr activity / sessions / agent-teams</div>
+
+<div class="cards">
+  <div class="card"><div class="v">261,831,949</div><div class="l">pi 累计 token</div></div>
+  <div class="card"><div class="v">$15.1925</div><div class="l">pi 累计成本</div></div>
+  <div class="card"><div class="v">1937</div><div class="l">pi 轮次</div></div>
+  <div class="card"><div class="v">25</div><div class="l">pi session 文件</div></div>
+  <div class="card"><div class="v">32</div><div class="l">mem0 记忆条目</div></div>
+  <div class="card"><div class="v">1</div><div class="l">recap 天数</div></div>
+  <div class="card"><div class="v">22</div><div class="l">memory.md 行数</div></div>
+  <div class="card"><div class="v">43</div><div class="l">herdr 活动事件</div></div>
+  <div class="card"><div class="v">$1.0969</div><div class="l">herdr 成本</div></div>
+  <div class="card"><div class="v">0</div><div class="l">herdr 错误</div></div>
+  <div class="card"><div class="v">1</div><div class="l">herdr 会话</div></div>
+  <div class="card"><div class="v">0</div><div class="l">agent 团队运行</div></div>
+</div>
+
+<div class="panel"><h2>每日 token 用量</h2>
+<div id="tok-chart"></div>
+<div class="legend"><i style="background:#4f8cff"></i>每日总 token（含 cache）</div>
+</div>
+
+<div class="panel"><h2>每日成本 / 轮次 / recap / mem0 写入</h2>
+<div id="multi-chart"></div>
+<div class="legend">
+  <i style="background:#f0883e"></i>成本($)
+  <i style="background:#3fb950"></i>轮次
+  <i style="background:#8b93a5"></i>recap 条数
+  <i style="background:#d29922"></i>mem0 写入
+</div>
+</div>
+
+<div class="panel"><h2>模型分布（近 14 天）</h2>
+<div class="table-wrap"><table>
+<tr><th>模型</th><th>调用</th><th>token</th><th>成本</th></tr>
+<tr><td>deepseek-v4-flash</td><td>1713</td><td>242,467,087</td><td>$1.1301</td></tr><tr><td>gpt-5.6-sol</td><td>119</td><td>14,933,467</td><td>$13.8397</td></tr><tr><td>gpt-5.6-luna</td><td>42</td><td>3,040,186</td><td>$0.1251</td></tr><tr><td>deepseek-v4-pro</td><td>60</td><td>1,391,209</td><td>$0.0976</td></tr><tr><td>claude-fable-5</td><td>1</td><td>0</td><td>$0.0000</td></tr><tr><td>claude-opus-4-8</td><td>2</td><td>0</td><td>$0.0000</td></tr>
+</table></div>
+</div>
+
+<div class="panel"><h2>herdr 每日活动（调用 / 成本 / 错误）</h2>
+<div id="herdr-chart"></div>
+<div class="legend">
+  <i style="background:#7c5cff"></i>调用数
+  <i style="background:#f0883e"></i>成本($)
+  <i style="background:#f85149"></i>错误
+</div>
+</div>
+
+<div class="panel"><h2>herdr 各 bot</h2>
+<div class="table-wrap"><table>
+<tr><th>bot</th><th>调用</th><th>错误</th><th>成本</th></tr>
+<tr><td>work</td><td>43</td><td>0</td><td>$1.0969</td></tr>
+</table></div>
+</div>
+
+<div class="panel"><h2>最近 recap</h2>
+<div class="table-wrap"><table>
+<tr><th>日期</th><th>内容</th></tr>
+<tr><td>2026-08-18</td><td>01:23 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 重启完成，Telegram 健康检查通过 | 下一步: 无，正常运行中</td></tr><tr><td>2026-08-18</td><td>01:23 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: Exa MCP 连接成功并实测搜索正常 | 下一步: 需要时直接用 exa </td></tr><tr><td>2026-08-18</td><td>01:25 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 找回 exa/tavily 选型规则并补写入 skill | 下一步: 搜索</td></tr><tr><td>2026-08-18</td><td>01:44 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: 拆解 agent 身份=执行+记忆+信任三支柱，钱包只解决其一 | 下一步:</td></tr><tr><td>2026-08-18</td><td>02:28 `2026-08-17T15-19-56-979Z_01a0104e-d533-7164-8c06-5095b5f24ab0.jsonl` 📌 状态: Cumora 源码留存 ~/dev/cumora 并写入长期记忆 | 下一步</td></tr>
+</table></div>
+</div>
+
+<p class="note">pi token 为 assistant usage.totalTokens（含 cache）。mem0 条目来自 history.db。herdr 数据来自 ~/.metabot/*.db（activity_events / sessions / agent_team_runs）。</p>
+</div>
+
+<script>
+const days = ["2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-15", "2026-08-16", "2026-08-17", "2026-08-18"];
+const tok = [0, 0, 0, 0, 0, 0, 14487, 53956768, 54277053, 28536571, 30329698, 5530742, 72811285, 16375345];
+const cost = [0, 0, 0, 0, 0, 0, 0.0034, 10.2768, 4.2911, 0.1481, 0.1098, 0.0198, 0.2438, 0.0997];
+const turn = [0, 0, 0, 0, 0, 0, 6, 378, 715, 353, 141, 20, 199, 125];
+const recap = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5];
+const mem0 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const hcall = [0, 0, 0, 0, 0, 0, 0, 0, 0, 20, 0, 0, 0, 23];
+const hcost = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0.0671, 0, 0, 0, 1.0297];
+const herr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+
+function barChart(el, data, color, h=180) {
+  const max = Math.max(...data, 1);
+  const w = 960, pad = 30;
+  const inner = w - pad * 2;
+  let s = `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:180px">`;
+  data.forEach((v, i) => {
+    const bw = inner / data.length;
+    const bh = (v / max) * (h - 40);
+    const x = pad + i * bw + bw * 0.15;
+    const y = h - 20 - bh;
+    s += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.7).toFixed(1)}" height="${bh.toFixed(1)}" fill="${color}" rx="2"><title>${days[i]}: ${v.toLocaleString()}</title></rect>`;
+  });
+  s += '</svg>';
+  el.innerHTML = s;
+}
+
+function multiChart(el) {
+  const max = Math.max(...cost, ...turn, ...recap, ...mem0, 1);
+  const w = 960, h = 180, pad = 30;
+  const inner = w - pad * 2;
+  let s = `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:180px">`;
+  const series = [['#f0883e', cost], ['#3fb950', turn], ['#8b93a5', recap], ['#d29922', mem0]];
+  series.forEach(([color, data]) => {
+    data.forEach((v, i) => {
+      const bw = inner / (data.length * 4);
+      const bh = (v / max) * (h - 40);
+      const x = pad + i * (inner / data.length) + bw * series.indexOf([color, data]);
+      const y = h - 20 - bh;
+      s += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.8).toFixed(1)}" height="${Math.max(bh,0.5).toFixed(1)}" fill="${color}" rx="1"><title>${days[i]}</title></rect>`;
+    });
+  });
+  s += '</svg>';
+  el.innerHTML = s;
+}
+
+barChart(document.getElementById('tok-chart'), tok, '#4f8cff');
+multiChart(document.getElementById('multi-chart'));
+
+// herdr 三序列图
+(function () {
+  const max = Math.max(...hcall, ...hcost, ...herr, 1);
+  const w = 960, h = 180, pad = 30;
+  const inner = w - pad * 2;
+  let s = `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="height:180px">`;
+  const series = [['#7c5cff', hcall], ['#f0883e', hcost], ['#f85149', herr]];
+  series.forEach(([color, data]) => {
+    data.forEach((v, i) => {
+      const bw = inner / (data.length * 4);
+      const bh = (v / max) * (h - 40);
+      const x = pad + i * (inner / data.length) + bw * series.indexOf([color, data]);
+      const y = h - 20 - bh;
+      s += `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${(bw*0.8).toFixed(1)}" height="${Math.max(bh,0.5).toFixed(1)}" fill="${color}" rx="1"><title>${days[i]}</title></rect>`;
+    });
+  });
+  s += '</svg>';
+  document.getElementById('herdr-chart').innerHTML = s;
+})();
+</script>
+</div></body></html>
