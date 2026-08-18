@@ -1,21 +1,28 @@
-import type { Dashboard, DailyEntry, HerdrDailyEntry, RangeKey } from './types'
+import type { Dashboard, DailyEntry, ClaudeDailyEntry, HerdrDailyEntry, RangeKey } from './types'
 
 const EMPTY_DAILY: DailyEntry = {
   input: 0, output: 0, cacheRead: 0, cacheWrite: 0, reasoning: 0,
   tokens: 0, cost: 0, costIn: 0, costOut: 0, costCache: 0, turns: 0, cacheRate: 0,
 }
 
+const EMPTY_CLAUDE_DAILY: ClaudeDailyEntry = {
+  input: 0, output: 0, cacheRead: 0, cacheWrite: 0, tokens: 0, turns: 0, cacheRate: 0,
+}
+
 export interface RangeSlice {
   /** Every date in the window that has pi activity, ascending. */
   dates: string[]
   daily: DailyEntry[]
-  /** herdr / mem0 are sparser than pi, so they keep their own date axes. */
+  /** claude / herdr / mem0 are sparser than pi, so they keep their own date axes. */
+  claudeDates: string[]
+  claudeDaily: ClaudeDailyEntry[]
   herdrDates: string[]
   herdrDaily: HerdrDailyEntry[]
   mem0Dates: string[]
   mem0Counts: number[]
   recaps: Dashboard['recaps']
   pi: DailyEntry & { cacheSaving: number }
+  claude: ClaudeDailyEntry
   herdr: { calls: number; cost: number; errors: number; durationMs: number; errorRate: number; avgDurationSec: number }
   mem0Writes: number
 }
@@ -55,6 +62,9 @@ export function sliceData(data: Dashboard, range: RangeKey): RangeSlice {
   const dates = allDates.filter(inWindow)
   const daily = dates.map((d) => data.daily[d])
 
+  const claudeDates = sortedKeys(data.claudeDaily).filter(inWindow)
+  const claudeDaily = claudeDates.map((d) => data.claudeDaily[d])
+
   const herdrDates = sortedKeys(data.herdrDaily).filter(inWindow)
   const herdrDaily = herdrDates.map((d) => data.herdrDaily[d])
 
@@ -78,6 +88,18 @@ export function sliceData(data: Dashboard, range: RangeKey): RangeSlice {
   const cacheDenom = pi.input + pi.cacheRead
   pi.cacheRate = cacheDenom > 0 ? (pi.cacheRead / cacheDenom) * 100 : 0
 
+  const claude = claudeDaily.reduce<ClaudeDailyEntry>((acc, d) => ({
+    input: acc.input + d.input,
+    output: acc.output + d.output,
+    cacheRead: acc.cacheRead + d.cacheRead,
+    cacheWrite: acc.cacheWrite + d.cacheWrite,
+    tokens: acc.tokens + d.tokens,
+    turns: acc.turns + d.turns,
+    cacheRate: 0,
+  }), { ...EMPTY_CLAUDE_DAILY })
+  const claudeDenom = claude.input + claude.cacheRead
+  claude.cacheRate = claudeDenom > 0 ? (claude.cacheRead / claudeDenom) * 100 : 0
+
   const herdr = herdrDaily.reduce(
     (acc, h) => ({
       calls: acc.calls + h.calls,
@@ -91,12 +113,15 @@ export function sliceData(data: Dashboard, range: RangeKey): RangeSlice {
   return {
     dates,
     daily,
+    claudeDates,
+    claudeDaily,
     herdrDates,
     herdrDaily,
     mem0Dates,
     mem0Counts,
     recaps: data.recaps.filter((r) => inWindow(r.date)),
     pi: { ...pi, cacheSaving: cacheSaving(pi) },
+    claude,
     herdr: {
       ...herdr,
       errorRate: herdr.calls > 0 ? (herdr.errors / herdr.calls) * 100 : 0,
@@ -106,21 +131,33 @@ export function sliceData(data: Dashboard, range: RangeKey): RangeSlice {
   }
 }
 
-export interface ModelRow {
+/** The fields both pi and Claude models report — Claude has no cost. */
+export interface ModelRowBase {
   name: string
   tokens: number
-  cost: number
   calls: number
   cacheRead: number
   input: number
   cacheRate: number
 }
 
+export interface ModelRow extends ModelRowBase {
+  cost: number
+}
+
+const byVolume = (a: ModelRowBase, b: ModelRowBase) => b.tokens - a.tokens || b.calls - a.calls
+
 /** Models are only reported as all-time totals, so they never take the range filter. */
 export function modelRows(data: Dashboard): ModelRow[] {
   return Object.entries(data.models)
     .map(([name, m]) => ({ name, ...m }))
-    .sort((a, b) => b.tokens - a.tokens || b.calls - a.calls)
+    .sort(byVolume)
+}
+
+export function claudeModelRows(data: Dashboard): ModelRowBase[] {
+  return Object.entries(data.claudeModels)
+    .map(([name, m]) => ({ name, ...m }))
+    .sort(byVolume)
 }
 
 export interface BotRow {

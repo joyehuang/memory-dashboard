@@ -48,6 +48,10 @@ export function baseOption(opts: {
   legend?: boolean
   zoom?: boolean
   gridLeft?: number
+  /** Extra headroom when a series carries a label above its topmost point. */
+  gridTop?: number
+  /** Extra room when boundaryGap:false puts the last tick label on the edge. */
+  gridRight?: number
 }): EChartsOption {
   const zoom = opts.zoom !== false && opts.points > 6
   return {
@@ -55,9 +59,9 @@ export function baseOption(opts: {
     animationDuration: 400,
     textStyle: { fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif', color: INK.primary },
     grid: {
-      top: opts.legend === false ? 16 : 42,
+      top: opts.gridTop ?? (opts.legend === false ? 16 : 42),
       left: opts.gridLeft ?? 8,
-      right: 12,
+      right: opts.gridRight ?? 12,
       bottom: zoom ? 54 : 28,
       containLabel: true,
     },

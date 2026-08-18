@@ -12,12 +12,18 @@ React 18 + Vite + TypeScript，图表用 ECharts（按需注册 bar/line/pie）�
 数据源（本地机器）：
 
 - **pi** — sessions（token / 成本 / 模型）、recaps、memory.md、mem0
+- **Claude Code** — sessions（token / 缓存 / 轮次 / 模型）
 - **herdr** — activity.db（活动 / 成本 / 错误）、sessions.db、agent-teams.db
 
 生成脚本 `~/bin/memory-dashboard-data.py` 写出 `public/data.json`，本仓库不参与生成逻辑。
 
-`data.json` 结构：`totals` / `daily` / `models` / `recaps` / `mem0Ops` / `herdrDaily` / `herdrBots`。
-其中 `models` 与 `herdrBots` 只有全历史汇总，不按日拆分，所以这两块不受时间范围切换影响。
+`data.json` 结构：`totals` / `daily` / `claudeDaily` / `models` / `claudeModels` /
+`recaps` / `mem0Ops` / `herdrDaily` / `herdrBots`。
+
+两点数据源差异，前端按此处理：
+
+- `models` / `claudeModels` / `herdrBots` 只有全历史汇总，不按日拆分，所以不受时间范围切换影响
+- **Claude Code 数据不含任何计费字段**，因此 Claude 板块只有 token / 缓存 / 轮次，没有成本图和成本列
 
 **缓存节省**估算 = `cacheRead × (costIn / input) − costCache`，
 即把缓存读取的 token 按输入单价计费会多花多少钱。

@@ -1,7 +1,7 @@
 import type { EChartsOption } from 'echarts'
 import { baseOption, categoryAxis, valueAxis, HUE, INK, stackItemStyle, barRadiusTop, barRadiusRight, fmtCb } from './theme'
 import { compactAxis, compactNum, fullNum, money, moneyAxis, pct, shortDate, duration } from './format'
-import type { RangeSlice, ModelRow, BotRow } from './derive'
+import type { RangeSlice, ModelRow, ModelRowBase, BotRow } from './derive'
 import type { PiTotals } from './types'
 
 type TipParam = { name: string; seriesName: string; value: number; marker: string; dataIndex: number }
@@ -92,7 +92,7 @@ export function dailyCacheRateOption(s: RangeSlice): EChartsOption {
   const x = s.dates.map(shortDate)
   const last = s.daily.length - 1
   return {
-    ...baseOption({ points: x.length, legend: false }),
+    ...baseOption({ points: x.length, legend: false, gridTop: 30, gridRight: 26 }),
     tooltip: {
       ...(baseOption({ points: x.length }).tooltip as object),
       axisPointer: { type: 'line', lineStyle: { color: INK.axis } },
@@ -113,7 +113,11 @@ export function dailyCacheRateOption(s: RangeSlice): EChartsOption {
         // Direct-label the endpoint only; the axis and tooltip carry the rest.
         label: {
           show: true,
+          // The endpoint is the last category, so right-align keeps the label
+          // inside the plot instead of running off the card edge.
           position: 'top',
+          align: 'right',
+          distance: 8,
           color: INK.primary,
           fontSize: 11,
           formatter: fmtCb<{ dataIndex: number; value: number }>((p) => (p.dataIndex === last ? pct(p.value) : '')),
@@ -171,6 +175,106 @@ export function dailyTurnsOption(s: RangeSlice): EChartsOption {
         barMaxWidth: 26,
         itemStyle: { color: HUE.turns, borderRadius: barRadiusTop },
         data: s.daily.map((d) => d.turns),
+      },
+    ],
+  }
+}
+
+/* ---------- Claude Code 每日 ---------- */
+
+export function claudeTokensOption(s: RangeSlice): EChartsOption {
+  const x = s.claudeDates.map(shortDate)
+  const defs: { name: string; key: 'cacheRead' | 'cacheWrite' | 'input' | 'output'; color: string }[] = [
+    { name: '缓存读取', key: 'cacheRead', color: HUE.cache },
+    { name: '缓存写入', key: 'cacheWrite', color: HUE.cacheWrite },
+    { name: '输入', key: 'input', color: HUE.input },
+    { name: '输出', key: 'output', color: HUE.output },
+  ]
+  return {
+    ...baseOption({ points: x.length }),
+    tooltip: {
+      ...(baseOption({ points: x.length }).tooltip as object),
+      formatter: (p: unknown) => tooltipRows(p as TipParam[], fullNum, '合计'),
+    },
+    xAxis: categoryAxis(x),
+    yAxis: valueAxis(compactAxis),
+    series: defs.map((d, i) => ({
+      name: d.name,
+      type: 'bar' as const,
+      stack: 'claude',
+      barMaxWidth: 26,
+      itemStyle: {
+        color: d.color,
+        ...stackItemStyle,
+        borderRadius: i === defs.length - 1 ? barRadiusTop : 0,
+      },
+      data: s.claudeDaily.map((row) => row[d.key]),
+    })),
+  }
+}
+
+export function claudeCacheRateOption(s: RangeSlice): EChartsOption {
+  const x = s.claudeDates.map(shortDate)
+  const last = s.claudeDaily.length - 1
+  return {
+    ...baseOption({ points: x.length, legend: false, gridTop: 30, gridRight: 26 }),
+    tooltip: {
+      ...(baseOption({ points: x.length }).tooltip as object),
+      axisPointer: { type: 'line', lineStyle: { color: INK.axis } },
+      formatter: (p: unknown) => tooltipRows(p as TipParam[], (v) => pct(v)),
+    },
+    xAxis: { ...categoryAxis(x), boundaryGap: false },
+    // Claude sits pinned near 100%, so a fixed 0–100 axis would flatten it. The
+    // floor follows the data instead of being hard-coded, so a bad day can't clip.
+    yAxis: {
+      ...valueAxis((v) => v + '%'),
+      max: 100,
+      min: Math.max(0, Math.floor(Math.min(...s.claudeDaily.map((d) => d.cacheRate), 100)) - 1),
+    },
+    series: [
+      {
+        name: '缓存命中率',
+        type: 'line',
+        smooth: 0.25,
+        symbol: 'circle',
+        symbolSize: 8,
+        lineStyle: { width: 2, color: HUE.cache },
+        itemStyle: { color: HUE.cache, borderColor: INK.surface, borderWidth: 2 },
+        areaStyle: { color: 'rgba(57,135,229,0.10)' },
+        label: {
+          show: true,
+          // The endpoint is the last category, so right-align keeps the label
+          // inside the plot instead of running off the card edge.
+          position: 'top',
+          align: 'right',
+          distance: 8,
+          color: INK.primary,
+          fontSize: 11,
+          formatter: fmtCb<{ dataIndex: number; value: number }>((p) => (p.dataIndex === last ? pct(p.value) : '')),
+        },
+        data: s.claudeDaily.map((d) => d.cacheRate),
+      },
+    ],
+  }
+}
+
+export function claudeTurnsOption(s: RangeSlice): EChartsOption {
+  const x = s.claudeDates.map(shortDate)
+  return {
+    ...baseOption({ points: x.length, legend: false }),
+    tooltip: {
+      ...(baseOption({ points: x.length }).tooltip as object),
+      formatter: (p: unknown) => tooltipRows(p as TipParam[], (v) => fullNum(v) + ' 轮'),
+    },
+    xAxis: categoryAxis(x),
+    yAxis: valueAxis(compactAxis),
+    series: [
+      {
+        name: '对话轮次',
+        type: 'bar',
+        barMaxWidth: 26,
+        itemStyle: { color: HUE.turns, borderRadius: barRadiusTop },
+        data: s.claudeDaily.map((d) => d.turns),
       },
     ],
   }
@@ -260,7 +364,7 @@ function horizontalBar(
   }
 }
 
-export function modelTokensOption(rows: ModelRow[]): EChartsOption {
+export function modelTokensOption(rows: ModelRowBase[]): EChartsOption {
   return horizontalBar(rows.map((r) => ({ name: r.name, value: r.tokens })), HUE.cache, compactNum)
 }
 
@@ -269,7 +373,7 @@ export function modelCostOption(rows: ModelRow[]): EChartsOption {
   return horizontalBar(sorted.map((r) => ({ name: r.name, value: r.cost })), HUE.cost, money)
 }
 
-export function modelCacheRateOption(rows: ModelRow[]): EChartsOption {
+export function modelCacheRateOption(rows: ModelRowBase[]): EChartsOption {
   const active = rows.filter((r) => r.calls > 0 && r.tokens > 0).sort((a, b) => b.cacheRate - a.cacheRate)
   const opt = horizontalBar(active.map((r) => ({ name: r.name, value: r.cacheRate })), HUE.cache, (v) => pct(v))
   return { ...opt, xAxis: { ...(opt.xAxis as object), max: 100 } }

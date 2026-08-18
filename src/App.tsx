@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { Dashboard, RangeKey } from './types'
-import { sliceData, modelRows, botRows } from './derive'
+import { sliceData, modelRows, claudeModelRows, botRows, type ModelRowBase } from './derive'
 import { compactNum, fullNum, money, pct, duration, bytesish, shortDate } from './format'
 import { StatTile } from './components/StatTile'
 import { ChartCard } from './components/ChartCard'
@@ -11,6 +11,7 @@ import {
   dailyTokensOption, dailyLiveTokensOption, dailyCacheRateOption, dailyCostOption, dailyTurnsOption,
   costBreakdownOption, modelTokensOption, modelCostOption, modelCacheRateOption,
   herdrCallsOption, herdrCostOption, herdrDurationOption, herdrBotsOption, mem0Option,
+  claudeTokensOption, claudeCacheRateOption, claudeTurnsOption,
 } from './charts'
 
 const RANGES: { key: RangeKey; label: string }[] = [
@@ -36,6 +37,7 @@ export default function App() {
 
   const slice = useMemo(() => (data ? sliceData(data, range) : null), [data, range])
   const models = useMemo(() => (data ? modelRows(data) : []), [data])
+  const cModels = useMemo(() => (data ? claudeModelRows(data) : []), [data])
   const bots = useMemo(() => (data ? botRows(data) : []), [data])
 
   if (error) {
@@ -53,7 +55,7 @@ export default function App() {
     )
   }
 
-  const { pi, herdr } = slice
+  const { pi, claude, herdr } = slice
   const rangeLabel = RANGES.find((r) => r.key === range)!.label
   const span = slice.dates.length > 0 ? `${slice.dates[0]} → ${slice.dates[slice.dates.length - 1]}` : '无数据'
 
@@ -98,6 +100,29 @@ export default function App() {
         />
         <StatTile label="对话轮次" value={fullNum(pi.turns)} sub={`≈ ${(pi.turns / Math.max(1, slice.dates.length)).toFixed(0)} 轮/天`} accent={HUE.turns} />
         <StatTile label="会话数" value={fullNum(data.totals.pi.sessions)} sub="全部历史" />
+      </div>
+
+      {/* ---------- Claude Code 总览 ---------- */}
+      <h2 className="section-title">
+        Claude Code 用量 <span className="section-note">{rangeLabel} · 数据源不含计费信息</span>
+      </h2>
+      <div className="tiles">
+        <StatTile label="Token 总量" value={compactNum(claude.tokens)} sub={fullNum(claude.tokens)} accent={HUE.cache} />
+        <StatTile
+          label="缓存命中率"
+          value={pct(claude.cacheRate)}
+          sub={`${compactNum(claude.cacheRead)} / ${compactNum(claude.cacheRead + claude.input)} tokens`}
+          accent={HUE.cache}
+        />
+        <StatTile label="缓存写入" value={compactNum(claude.cacheWrite)} sub={fullNum(claude.cacheWrite)} accent={HUE.cacheWrite} />
+        <StatTile label="输出 Token" value={compactNum(claude.output)} sub={fullNum(claude.output)} accent={HUE.output} />
+        <StatTile
+          label="对话轮次"
+          value={fullNum(claude.turns)}
+          sub={`${slice.claudeDates.length} 个活跃日`}
+          accent={HUE.turns}
+        />
+        <StatTile label="会话数" value={fullNum(data.totals.claude.sessions)} sub="全部历史" />
       </div>
 
       {/* ---------- 记忆 ---------- */}
@@ -240,33 +265,111 @@ export default function App() {
         />
       </div>
 
+      {/* ---------- Claude Code 每日 ---------- */}
+      <h2 className="section-title">
+        Claude Code 每日趋势 <span className="section-note">{rangeLabel} · {slice.claudeDates.length} 个活跃日</span>
+      </h2>
+      <div className="grid grid--2">
+        <ChartCard
+          title="Claude 每日 Token"
+          hint="按类型堆叠 · 可缩放"
+          span="full"
+          height={320}
+          hasData={slice.claudeDates.length > 0}
+          option={claudeTokensOption(slice)}
+          table={
+            <DataTable
+              rows={slice.claudeDates.map((d, i) => ({ d, ...slice.claudeDaily[i] }))}
+              columns={[
+                { key: 'd', label: '日期', align: 'left', render: (r) => r.d },
+                { key: 'cacheRead', label: '缓存读取', render: (r) => fullNum(r.cacheRead) },
+                { key: 'cacheWrite', label: '缓存写入', render: (r) => fullNum(r.cacheWrite) },
+                { key: 'input', label: '输入', render: (r) => fullNum(r.input) },
+                { key: 'output', label: '输出', render: (r) => fullNum(r.output) },
+                { key: 'tokens', label: '合计', render: (r) => fullNum(r.tokens) },
+                { key: 'turns', label: '轮次', render: (r) => fullNum(r.turns) },
+              ] as Column<{ d: string } & (typeof slice.claudeDaily)[number]>[]}
+            />
+          }
+        />
+
+        <ChartCard
+          title="Claude 每日缓存命中率"
+          hint="纵轴按数据范围收窄，否则贴顶看不出变化"
+          hasData={slice.claudeDates.length > 0}
+          option={claudeCacheRateOption(slice)}
+          table={
+            <DataTable
+              rows={slice.claudeDates.map((d, i) => ({ d, rate: slice.claudeDaily[i].cacheRate }))}
+              columns={[
+                { key: 'd', label: '日期', align: 'left', render: (r) => r.d },
+                { key: 'rate', label: '命中率', render: (r) => pct(r.rate) },
+              ]}
+            />
+          }
+        />
+
+        <ChartCard
+          title="Claude 每日对话轮次"
+          hasData={slice.claudeDates.length > 0}
+          option={claudeTurnsOption(slice)}
+          table={
+            <DataTable
+              rows={slice.claudeDates.map((d, i) => ({ d, turns: slice.claudeDaily[i].turns }))}
+              columns={[
+                { key: 'd', label: '日期', align: 'left', render: (r) => r.d },
+                { key: 'turns', label: '轮次', render: (r) => fullNum(r.turns) },
+              ]}
+            />
+          }
+        />
+      </div>
+
       {/* ---------- 模型 ---------- */}
       <h2 className="section-title">
         模型分布 <span className="section-note">全部历史（数据源不按日拆分）</span>
       </h2>
-      {/* Two columns: model names are long, so these bars need the width. */}
+      {/* pi and Claude sit side by side, row per measure; model names need the width. */}
       <div className="grid grid--2">
         <ChartCard
-          title="各模型 Token"
+          title="pi · 各模型 Token"
           hasData={models.length > 0}
-          height={Math.max(200, models.length * 34 + 40)}
+          height={barHeight(models.length)}
           option={modelTokensOption(models)}
           table={<ModelTable rows={models} />}
         />
         <ChartCard
-          title="各模型成本"
-          hasData={models.length > 0}
-          height={Math.max(200, models.length * 34 + 40)}
-          option={modelCostOption(models)}
+          title="Claude Code · 各模型 Token"
+          hasData={cModels.length > 0}
+          height={barHeight(cModels.length)}
+          option={modelTokensOption(cModels)}
+          table={<ModelTable rows={cModels} />}
+        />
+
+        <ChartCard
+          title="pi · 各模型缓存命中率"
+          hint="仅统计有 token 记录的模型"
+          hasData={models.some((m) => m.tokens > 0)}
+          height={barHeight(models.filter((m) => m.tokens > 0).length)}
+          option={modelCacheRateOption(models)}
           table={<ModelTable rows={models} />}
         />
         <ChartCard
-          title="各模型缓存命中率"
+          title="Claude Code · 各模型缓存命中率"
           hint="仅统计有 token 记录的模型"
+          hasData={cModels.some((m) => m.tokens > 0)}
+          height={barHeight(cModels.filter((m) => m.tokens > 0).length)}
+          option={modelCacheRateOption(cModels)}
+          table={<ModelTable rows={cModels} />}
+        />
+
+        <ChartCard
+          title="pi · 各模型成本"
+          hint="Claude Code 数据源不含计费信息，无对应图"
           span="full"
-          hasData={models.some((m) => m.tokens > 0)}
-          height={Math.max(180, models.filter((m) => m.tokens > 0).length * 34 + 40)}
-          option={modelCacheRateOption(models)}
+          hasData={models.length > 0}
+          height={barHeight(models.length)}
+          option={modelCostOption(models)}
           table={<ModelTable rows={models} />}
         />
       </div>
@@ -356,14 +459,21 @@ export default function App() {
   )
 }
 
-function ModelTable({ rows }: { rows: ReturnType<typeof modelRows> }) {
+/** Horizontal bar cards grow with their row count so labels never crowd. */
+function barHeight(rows: number): number {
+  return Math.max(180, rows * 34 + 40)
+}
+
+/** Shared by pi and Claude; the cost column only appears when the source has one. */
+function ModelTable({ rows }: { rows: (ModelRowBase & { cost?: number })[] }) {
+  const priced = rows.some((r) => r.cost !== undefined)
   return (
     <DataTable
       rows={rows}
       columns={[
         { key: 'name', label: '模型', align: 'left', render: (r) => r.name },
         { key: 'tokens', label: 'Token', render: (r) => fullNum(r.tokens) },
-        { key: 'cost', label: '成本', render: (r) => money(r.cost) },
+        ...(priced ? [{ key: 'cost', label: '成本', render: (r: { cost?: number }) => money(r.cost ?? 0) }] : []),
         { key: 'calls', label: '调用', render: (r) => fullNum(r.calls) },
         { key: 'cacheRead', label: '缓存读取', render: (r) => fullNum(r.cacheRead) },
         { key: 'input', label: '输入', render: (r) => fullNum(r.input) },

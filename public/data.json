@@ -1,26 +1,36 @@
 {
- "generatedAt": "2026-08-18 14:27:30",
+ "generatedAt": "2026-08-18 14:32:01",
  "totals": {
   "pi": {
-   "tokens": 279848324,
-   "cost": 15.2531,
-   "turns": 2030,
+   "tokens": 286897306,
+   "cost": 15.2768,
+   "turns": 2062,
    "sessions": 25,
-   "input": 3124117,
-   "output": 959471,
-   "cacheRead": 275764736,
-   "reasoning": 474810,
-   "costIn": 5.7434,
-   "costOut": 1.8281,
-   "costCache": 7.6816,
+   "input": 3131223,
+   "output": 969923,
+   "cacheRead": 282796160,
+   "reasoning": 475920,
+   "costIn": 5.7444,
+   "costOut": 1.8311,
+   "costCache": 7.7013,
    "cacheRate": 98.9
+  },
+  "claude": {
+   "tokens": 189867726,
+   "turns": 1784,
+   "sessions": 26,
+   "input": 102511,
+   "output": 1900981,
+   "cacheRead": 182046143,
+   "cacheWrite": 5818091,
+   "cacheRate": 99.9
   },
   "mem0": {
    "entries": 32
   },
   "memoryMd": {
-   "lines": 23,
-   "chars": 3680
+   "lines": 24,
+   "chars": 4006
   },
   "herdr": {
    "calls": 44,
@@ -133,27 +143,83 @@
    "cacheRate": 99.9
   },
   "2026-08-18": {
-   "input": 293583,
-   "output": 85721,
-   "cacheRead": 34012416,
+   "input": 300689,
+   "output": 96173,
+   "cacheRead": 41043840,
    "cacheWrite": 0,
-   "reasoning": 25455,
-   "tokens": 34391720,
-   "cost": 0.1603382648,
-   "costIn": 0.04110161999999997,
-   "costOut": 0.02400187999999999,
-   "costCache": 0.09523476480000001,
-   "turns": 218,
-   "cacheRate": 99.1
+   "reasoning": 26565,
+   "tokens": 41440702,
+   "cost": 0.18394765199999996,
+   "costIn": 0.04209645999999998,
+   "costOut": 0.026928439999999998,
+   "costCache": 0.11492275199999999,
+   "turns": 250,
+   "cacheRate": 99.3
+  }
+ },
+ "claudeDaily": {
+  "2026-08-11": {
+   "input": 153,
+   "output": 75579,
+   "cacheRead": 3817231,
+   "cacheWrite": 144416,
+   "tokens": 4037379,
+   "turns": 81,
+   "cacheRate": 100.0
+  },
+  "2026-08-12": {
+   "input": 50589,
+   "output": 415373,
+   "cacheRead": 42905439,
+   "cacheWrite": 1904272,
+   "tokens": 45275673,
+   "turns": 628,
+   "cacheRate": 99.9
+  },
+  "2026-08-13": {
+   "input": 51288,
+   "output": 1019227,
+   "cacheRead": 113543196,
+   "cacheWrite": 2787943,
+   "tokens": 117401654,
+   "turns": 823,
+   "cacheRate": 100.0
+  },
+  "2026-08-14": {
+   "input": 127,
+   "output": 69524,
+   "cacheRead": 7464928,
+   "cacheWrite": 293768,
+   "tokens": 7828347,
+   "turns": 74,
+   "cacheRate": 100.0
+  },
+  "2026-08-15": {
+   "input": 94,
+   "output": 158805,
+   "cacheRead": 2287827,
+   "cacheWrite": 372171,
+   "tokens": 2818897,
+   "turns": 48,
+   "cacheRate": 100.0
+  },
+  "2026-08-18": {
+   "input": 260,
+   "output": 162473,
+   "cacheRead": 12027522,
+   "cacheWrite": 315521,
+   "tokens": 12505776,
+   "turns": 130,
+   "cacheRate": 100.0
   }
  },
  "models": {
   "deepseek-v4-flash": {
-   "tokens": 260483462,
-   "cost": 1.1907805335999984,
-   "calls": 1806,
-   "cacheRead": 257968512,
-   "input": 1683695,
+   "tokens": 267532444,
+   "cost": 1.2143899207999986,
+   "calls": 1838,
+   "cacheRead": 264999936,
+   "input": 1690801,
    "cacheRate": 99.4
   },
   "gpt-5.6-sol": {
@@ -194,6 +260,36 @@
    "calls": 1,
    "cacheRead": 0,
    "input": 0,
+   "cacheRate": 0
+  }
+ },
+ "claudeModels": {
+  "claude-opus-5": {
+   "tokens": 172267621,
+   "calls": 1493,
+   "input": 101950,
+   "cacheRead": 165703882,
+   "cacheRate": 99.9
+  },
+  "claude-fable-5": {
+   "tokens": 10535487,
+   "calls": 174,
+   "input": 329,
+   "cacheRead": 9682958,
+   "cacheRate": 100.0
+  },
+  "claude-sonnet-5": {
+   "tokens": 7064618,
+   "calls": 116,
+   "input": 232,
+   "cacheRead": 6659303,
+   "cacheRate": 100.0
+  },
+  "<synthetic>": {
+   "tokens": 0,
+   "calls": 1,
+   "input": 0,
+   "cacheRead": 0,
    "cacheRate": 0
   }
  },
