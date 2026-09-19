@@ -1,28 +1,28 @@
 {
- "generatedAt": "2026-09-19 09:00:06",
+ "generatedAt": "2026-09-20 09:00:06",
  "totals": {
   "pi": {
-   "tokens": 3538879739,
-   "cost": 2310.5194,
-   "turns": 19312,
+   "tokens": 3562538621,
+   "cost": 2310.9848,
+   "turns": 19378,
    "sessions": 157,
-   "input": 367900096,
-   "output": 7863053,
-   "cacheRead": 3163116590,
-   "reasoning": 3216194,
-   "costIn": 2131.7433,
-   "costOut": 156.1603,
-   "costCache": 22.6159,
+   "input": 370756320,
+   "output": 7889135,
+   "cacheRead": 3183893166,
+   "reasoning": 3225440,
+   "costIn": 2132.1432,
+   "costOut": 156.1676,
+   "costCache": 22.6741,
    "cacheRate": 89.6
   },
   "claude": {
-   "tokens": 694456858,
-   "turns": 4192,
-   "sessions": 1767,
-   "input": 99602,
-   "output": 5206963,
-   "cacheRead": 676040248,
-   "cacheWrite": 13110045,
+   "tokens": 686103405,
+   "turns": 4106,
+   "sessions": 1859,
+   "input": 99430,
+   "output": 5221939,
+   "cacheRead": 667727671,
+   "cacheWrite": 13054365,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -591,18 +591,32 @@
    "cacheRate": 88.8
   },
   "2026-09-19": {
-   "input": 5916375,
-   "output": 114734,
-   "cacheRead": 54790784,
+   "input": 8769330,
+   "output": 136209,
+   "cacheRead": 71441408,
    "cacheWrite": 0,
-   "reasoning": 38674,
-   "tokens": 60821893,
-   "cost": 33.149414884799995,
-   "costIn": 31.507534600000003,
-   "costOut": 1.5328740000000005,
-   "costCache": 0.10900628479999994,
-   "turns": 295,
-   "cacheRate": 90.3
+   "reasoning": 46389,
+   "tokens": 80346947,
+   "cost": 33.601463332000016,
+   "costIn": 31.906948300000003,
+   "costOut": 1.538887,
+   "costCache": 0.15562803199999994,
+   "turns": 350,
+   "cacheRate": 89.1
+  },
+  "2026-09-20": {
+   "input": 3269,
+   "output": 4607,
+   "cacheRead": 4125952,
+   "cacheWrite": 0,
+   "reasoning": 1531,
+   "tokens": 4133828,
+   "cost": 0.0133002856,
+   "costIn": 0.00045766,
+   "costOut": 0.0012899600000000002,
+   "costCache": 0.0115526656,
+   "turns": 11,
+   "cacheRate": 99.9
   }
  },
  "claudeDaily": {
@@ -634,12 +648,12 @@
    "cacheRate": 100.0
   },
   "2026-08-20": {
-   "input": 1350,
-   "output": 503435,
-   "cacheRead": 101060802,
-   "cacheWrite": 1533745,
-   "tokens": 103099332,
-   "turns": 675,
+   "input": 1106,
+   "output": 429211,
+   "cacheRead": 89699802,
+   "cacheWrite": 1271657,
+   "tokens": 91401776,
+   "turns": 553,
    "cacheRate": 100.0
   },
   "2026-08-21": {
@@ -805,12 +819,12 @@
    "cacheRate": 0
   },
   "2026-09-19": {
-   "input": 3410,
-   "output": 1046800,
-   "cacheRead": 265098494,
-   "cacheWrite": 2212803,
-   "tokens": 268361507,
-   "turns": 932,
+   "input": 3482,
+   "output": 1136000,
+   "cacheRead": 268146917,
+   "cacheWrite": 2419211,
+   "tokens": 271705610,
+   "turns": 968,
    "cacheRate": 100.0
   }
  },
@@ -832,12 +846,12 @@
    "cacheRate": 86.6
   },
   "deepseek-v4-flash": {
-   "tokens": 504725336,
-   "cost": 3.5078200415999943,
-   "calls": 2976,
-   "cacheRead": 490988672,
-   "input": 12237244,
-   "cacheRate": 97.6
+   "tokens": 528384218,
+   "cost": 3.973168774399995,
+   "calls": 3042,
+   "cacheRead": 511765248,
+   "input": 15093468,
+   "cacheRate": 97.1
   },
   "cc/deepseek-v4-flash": {
    "tokens": 440973979,
@@ -921,17 +935,17 @@
    "cacheRate": 100.0
   },
   "claude-sonnet-5": {
-   "tokens": 243572352,
-   "calls": 1742,
-   "input": 3484,
-   "cacheRead": 236752602,
+   "tokens": 231874796,
+   "calls": 1620,
+   "input": 3240,
+   "cacheRead": 225391602,
    "cacheRate": 100.0
   },
   "claude-fable-5-1": {
-   "tokens": 103495038,
-   "calls": 721,
-   "input": 92689,
-   "cacheRead": 96994871,
+   "tokens": 106839141,
+   "calls": 757,
+   "input": 92761,
+   "cacheRead": 100043294,
    "cacheRate": 99.9
   },
   "claude-fable-5": {
@@ -6897,6 +6911,22 @@
   {
    "date": "2026-09-19",
    "text": "05:06 `2026-09-18T15-54-38-282Z_01a0b53a-1746-7a38-86b9-a093072dcb27.jsonl` 📌 状态: 已核好新例子待替换旧引用 | 下一步: 结构跑完即做例子替换版"
+  },
+  {
+   "date": "2026-09-19",
+   "text": "15:51 `2026-09-18T15-54-38-282Z_01a0b53a-1746-7a38-86b9-a093072dcb27.jsonl` 📌 状态: 已核对新预约#124并确认真实计数124 | 下一步: 无需动作，邮件链路正常"
+  },
+  {
+   "date": "2026-09-19",
+   "text": "20:41 `2026-09-18T15-54-38-282Z_01a0b53a-1746-7a38-86b9-a093072dcb27.jsonl` 📌 状态: 已派Fable做标题与人话版语气重写 | 下一步: 出新标题候选与新Preview"
+  },
+  {
+   "date": "2026-09-19",
+   "text": "22:03 `2026-09-18T15-54-38-282Z_01a0b53a-1746-7a38-86b9-a093072dcb27.jsonl` 📌 状态: 已核对QQ日报双渠道回执与简报文件 | 下一步: 无需动作"
+  },
+  {
+   "date": "2026-09-20",
+   "text": "00:00 `2026-09-18T15-54-38-282Z_01a0b53a-1746-7a38-86b9-a093072dcb27.jsonl` 📌 状态: 已交付今日各群chat统计并配每日任务 | 下一步: 每晚22:30自动推送"
   }
  ],
  "mem0Ops": {
