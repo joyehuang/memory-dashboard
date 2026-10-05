@@ -1,28 +1,28 @@
 {
- "generatedAt": "2026-10-05 09:00:07",
+ "generatedAt": "2026-10-06 09:00:05",
  "totals": {
   "pi": {
-   "tokens": 5131006144,
-   "cost": 3898.9536,
-   "turns": 23761,
-   "sessions": 173,
-   "input": 565281659,
-   "output": 9830766,
-   "cacheRead": 4533314530,
-   "reasoning": 3895276,
-   "costIn": 3565.0361,
-   "costOut": 218.2979,
+   "tokens": 5138280172,
+   "cost": 3910.0614,
+   "turns": 23829,
+   "sessions": 175,
+   "input": 566324498,
+   "output": 9844355,
+   "cacheRead": 4539532130,
+   "reasoning": 3896099,
+   "costIn": 3575.4645,
+   "costOut": 218.9773,
    "costCache": 43.5879,
    "cacheRate": 88.9
   },
   "claude": {
-   "tokens": 3037676778,
-   "turns": 12123,
-   "sessions": 2602,
-   "input": 132446,
-   "output": 18807458,
-   "cacheRead": 2978794146,
-   "cacheWrite": 39942728,
+   "tokens": 3005403157,
+   "turns": 11807,
+   "sessions": 2180,
+   "input": 131835,
+   "output": 18338702,
+   "cacheRead": 2948139507,
+   "cacheWrite": 38793113,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -815,39 +815,35 @@
    "cacheRate": 80.8
   },
   "2026-10-05": {
-   "input": 1720797,
-   "output": 1845,
-   "cacheRead": 5711360,
+   "input": 2577836,
+   "output": 12876,
+   "cacheRead": 10053504,
    "cacheWrite": 0,
-   "reasoning": 60,
-   "tokens": 7434002,
-   "cost": 17.300220000000003,
-   "costIn": 17.207970000000003,
-   "costOut": 0.09225,
+   "reasoning": 808,
+   "tokens": 12644216,
+   "cost": 26.42216000000001,
+   "costIn": 25.778360000000006,
+   "costOut": 0.6437999999999999,
+   "costCache": 0.0,
+   "turns": 68,
+   "cacheRate": 79.6
+  },
+  "2026-10-06": {
+   "input": 185800,
+   "output": 2558,
+   "cacheRead": 1875456,
+   "cacheWrite": 0,
+   "reasoning": 75,
+   "tokens": 2063814,
+   "cost": 1.9859000000000002,
+   "costIn": 1.8580000000000005,
+   "costOut": 0.1279,
    "costCache": 0.0,
    "turns": 13,
-   "cacheRate": 76.8
+   "cacheRate": 91.0
   }
  },
  "claudeDaily": {
-  "2026-08-11": {
-   "input": 149,
-   "output": 75543,
-   "cacheRead": 3773735,
-   "cacheWrite": 125184,
-   "tokens": 3974611,
-   "turns": 79,
-   "cacheRate": 100.0
-  },
-  "2026-08-12": {
-   "input": 78,
-   "output": 55062,
-   "cacheRead": 3501060,
-   "cacheWrite": 64341,
-   "tokens": 3620541,
-   "turns": 43,
-   "cacheRate": 100.0
-  },
   "2026-08-18": {
    "input": 766,
    "output": 480304,
@@ -884,58 +880,22 @@
    "turns": 160,
    "cacheRate": 100.0
   },
-  "2026-08-31": {
-   "input": 604,
-   "output": 311557,
-   "cacheRead": 34318748,
-   "cacheWrite": 835528,
-   "tokens": 35466437,
-   "turns": 302,
-   "cacheRate": 100.0
-  },
-  "2026-09-01": {
-   "input": 4,
-   "output": 3094,
-   "cacheRead": 37068,
-   "cacheWrite": 33292,
-   "tokens": 73458,
-   "turns": 2,
-   "cacheRate": 100.0
-  },
   "2026-09-02": {
-   "input": 56849,
-   "output": 783113,
-   "cacheRead": 37829051,
-   "cacheWrite": 2440266,
-   "tokens": 41109279,
-   "turns": 251,
+   "input": 56843,
+   "output": 780503,
+   "cacheRead": 37781866,
+   "cacheWrite": 2400067,
+   "tokens": 41019279,
+   "turns": 248,
    "cacheRate": 99.9
   },
-  "2026-09-03": {
-   "input": 8,
-   "output": 1106,
-   "cacheRead": 107504,
-   "cacheWrite": 37760,
-   "tokens": 146378,
-   "turns": 4,
-   "cacheRate": 100.0
-  },
   "2026-09-04": {
-   "input": 28634,
-   "output": 764446,
-   "cacheRead": 71428918,
-   "cacheWrite": 2021235,
-   "tokens": 74243233,
-   "turns": 568,
-   "cacheRate": 100.0
-  },
-  "2026-09-05": {
-   "input": 128,
-   "output": 109277,
-   "cacheRead": 7182047,
-   "cacheWrite": 283208,
-   "tokens": 7574660,
-   "turns": 64,
+   "input": 28418,
+   "output": 695133,
+   "cacheRead": 65498347,
+   "cacheWrite": 1726942,
+   "tokens": 67948840,
+   "turns": 460,
    "cacheRate": 100.0
   },
   "2026-09-07": {
@@ -1063,15 +1023,24 @@
    "tokens": 0,
    "turns": 1,
    "cacheRate": 0
+  },
+  "2026-10-05": {
+   "input": 582,
+   "output": 158806,
+   "cacheRead": 24243279,
+   "cacheWrite": 564190,
+   "tokens": 24966857,
+   "turns": 289,
+   "cacheRate": 100.0
   }
  },
  "models": {
   "gpt-6-astra": {
-   "tokens": 2860651806,
-   "cost": 3752.0349000000087,
-   "calls": 9623,
-   "cacheRead": 2502344832,
-   "input": 354082845,
+   "tokens": 2867925834,
+   "cost": 3763.1427400000102,
+   "calls": 9691,
+   "cacheRead": 2508562432,
+   "input": 355125684,
    "cacheRate": 87.6
   },
   "z-ai/glm-5.3-flash": {
@@ -1197,38 +1166,38 @@
  },
  "claudeModels": {
   "claude-opus-5-5": {
-   "tokens": 2225206979,
-   "calls": 7060,
-   "input": 14154,
-   "cacheRead": 2190632669,
+   "tokens": 2250129013,
+   "calls": 7348,
+   "input": 14734,
+   "cacheRead": 2214850689,
    "cacheRate": 100.0
   },
   "claude-opus-5": {
-   "tokens": 400190912,
-   "calls": 2139,
-   "input": 4278,
-   "cacheRead": 392760510,
+   "tokens": 364809997,
+   "calls": 1839,
+   "input": 3678,
+   "cacheRead": 358490626,
    "cacheRate": 100.0
   },
   "claude-fable-5-1": {
-   "tokens": 205055684,
-   "calls": 1430,
-   "input": 111059,
-   "cacheRead": 193921836,
+   "tokens": 205038920,
+   "calls": 1429,
+   "input": 111057,
+   "cacheRead": 193911719,
    "cacheRate": 99.9
   },
   "claude-sonnet-5": {
-   "tokens": 199628051,
-   "calls": 1364,
-   "input": 2728,
-   "cacheRead": 194204336,
+   "tokens": 185380404,
+   "calls": 1182,
+   "input": 2364,
+   "cacheRead": 180861214,
    "cacheRate": 100.0
   },
-  "claude-fable-5": {
-   "tokens": 7595152,
-   "calls": 122,
-   "input": 227,
-   "cacheRead": 7274795,
+  "claude-sonnet-5-5": {
+   "tokens": 44823,
+   "calls": 1,
+   "input": 2,
+   "cacheRead": 25259,
    "cacheRate": 100.0
   },
   "<synthetic>": {
@@ -9103,6 +9072,46 @@
   {
    "date": "2026-10-05",
    "text": "03:36 `2026-09-30T11-25-36-048Z_01a0f210-17b0-7a89-9574-171e298fc612.jsonl` 📌 状态: 周报也是同一个调度问题：新版要求北京时间周一 00:20 生成，系统定时器仍是墨尔本周日 21:00 | 下一步: 见上"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "15:38 `2026-10-05T04-37-52-447Z_01a10a5a-9abf-7ef1-a17a-1e8d609c3e02.jsonl` 📌 状态: 在，Joye � | 下一步: 见上"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "19:28 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: 已核实当前机器人与私聊标识 | 下一步: 选定独立告警机器人或告警群"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "19:37 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: 已确认接入方式并打开登录页 | 下一步: 登录后创建机器人并接入MetaBot"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "19:46 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: 新机器人已创建并启动后台部署 | 下一步: 验收MetaBot与告警投递链路"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "19:47 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: Token 在 Mac mini： /.config/metabotfiloalerts/telegramto | 下一步: 见上"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "19:50 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: 你现在是在另一台电脑上， 指向 /Users/ceshi；Token 文件在 Mac mini 的 /User | 下一步: 见上"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "19:51 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: Token 是机器人控制密钥，我不能直接贴进聊天 | 下一步: 见上"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "19:54 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: Codex已升级并定位旧版本调用 | 下一步: 切换告警服务路径并验证回复"
+  },
+  {
+   "date": "2026-10-05",
+   "text": "20:15 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: 已核对副校长议题并划分拆分边界 | 下一步: 先收敛运维职责再考虑内容伙伴"
+  },
+  {
+   "date": "2026-10-06",
+   "text": "03:50 `2026-10-05T04-39-29-049Z_01a10a5c-1419-77ca-9706-a96a5b6466c5.jsonl` 📌 状态: 已解释十项评测及改编口径差异 | 下一步: 选型需对照真实任务而非只看分数"
   }
  ],
  "mem0Ops": {
