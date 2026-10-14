@@ -1,24 +1,24 @@
 {
- "generatedAt": "2026-10-14 09:00:05",
+ "generatedAt": "2026-10-15 09:00:03",
  "totals": {
   "pi": {
-   "tokens": 5433900353,
+   "tokens": 5461151305,
    "cost": 4121.2182,
-   "turns": 24978,
+   "turns": 25017,
    "sessions": 180,
-   "input": 578994283,
-   "output": 10336156,
-   "cacheRead": 4785997220,
-   "reasoning": 4059497,
+   "input": 585756598,
+   "output": 10354842,
+   "cacheRead": 4806467171,
+   "reasoning": 4063614,
    "costIn": 3672.2712,
    "costOut": 228.164,
    "costCache": 58.7676,
-   "cacheRate": 89.2
+   "cacheRate": 89.1
   },
   "claude": {
    "tokens": 3075739992,
    "turns": 12368,
-   "sessions": 2660,
+   "sessions": 2749,
    "input": 127123,
    "output": 18292531,
    "cacheRead": 3016877224,
@@ -33,14 +33,14 @@
    "chars": 0
   },
   "herdr": {
-   "calls": 243,
+   "calls": 247,
    "cost": 0.0,
-   "errors": 3,
+   "errors": 4,
    "sessions": 4,
    "teamRuns": 0,
    "teamActive": 0,
-   "avgDurationSec": 54.7,
-   "errorRate": 1.2
+   "avgDurationSec": 59.7,
+   "errorRate": 1.6
   }
  },
  "daily": {
@@ -941,18 +941,32 @@
    "cacheRate": 100.0
   },
   "2026-10-14": {
-   "input": 2987979,
-   "output": 66983,
-   "cacheRead": 45914888,
+   "input": 7672877,
+   "output": 74099,
+   "cacheRead": 52645877,
    "cacheWrite": 3590534,
-   "reasoning": 24329,
-   "tokens": 52560384,
+   "reasoning": 25660,
+   "tokens": 63983387,
    "cost": 11.001132499999999,
    "costIn": 0.000164,
    "costOut": 0.3269300000000001,
    "costCache": 1.6977035000000003,
-   "turns": 89,
-   "cacheRate": 93.9
+   "turns": 105,
+   "cacheRate": 87.3
+  },
+  "2026-10-15": {
+   "input": 2077417,
+   "output": 11570,
+   "cacheRead": 13738962,
+   "cacheWrite": 0,
+   "reasoning": 2786,
+   "tokens": 15827949,
+   "cost": 0.0,
+   "costIn": 0.0,
+   "costOut": 0.0,
+   "costCache": 0.0,
+   "turns": 23,
+   "cacheRate": 86.9
   }
  },
  "claudeDaily": {
@@ -1187,12 +1201,12 @@
    "cacheRate": 81.0
   },
   "claude/claude-sonnet-5-5": {
-   "tokens": 112900223,
+   "tokens": 140151175,
    "cost": 0.0,
-   "calls": 447,
-   "cacheRead": 94796028,
-   "input": 17838680,
-   "cacheRate": 84.2
+   "calls": 486,
+   "cacheRead": 115265979,
+   "input": 24600995,
+   "cacheRate": 82.4
   },
   "anthropic/claude-sonnet-5.5": {
    "tokens": 87703536,
@@ -9883,6 +9897,46 @@
   {
    "date": "2026-10-14",
    "text": "05:26 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: Gemini 4 Argon 已接入 qqbot 并切换主群，群通知已发，PR #561/#562 待合 | 下一步: 你在主群问一句，我核对日志确认走了 Gemini"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "13:28 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 处理面试手记第168个预约通知 | 下一步: 无"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "13:31 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 用掉一张 reset 卡，20x 额度恢复到 0%，剩 1 张 | 下一步: 无"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "13:35 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 查明 Filo 告警无用量，撤回上一条错误归因，大头来源未确认 | 下一步: 等你决定是否给 CPA 开用量日志"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "13:38 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 停用旧 CPA key（已换新 key，旧 key 401） | 下一步: 看有没有谁报 401，或再决定是否开用量日志"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "15:34 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 处理面试手记第169个预约通知 | 下一步: 无"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "16:28 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 处理面试手记第170个预约通知 | 下一步: 无"
+  },
+  {
+   "date": "2026-10-14",
+   "text": "16:50 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 处理面试手记第171个预约通知 | 下一步: 无"
+  },
+  {
+   "date": "2026-10-15",
+   "text": "03:03 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 查明磁盘大头是 ego lite 的 30 份旧代码签名副本（约 30 GB） | 下一步: 等你确认后清理 ego 旧副本和废纸篓"
+  },
+  {
+   "date": "2026-10-15",
+   "text": "03:17 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 清理 ego 旧副本、废纸篓、渲染产物等，磁盘剩余约 31–35 GB | 下一步: 等你决定 Colima 数据去留或加 ego 清理进每周任务"
+  },
+  {
+   "date": "2026-10-15",
+   "text": "03:27 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 处理 10-14 日报告警，确认仍是暂停所致 | 下一步: 等你决定是否恢复日报周报"
   }
  ],
  "mem0Ops": {
@@ -9982,13 +10036,19 @@
    "cost": 0.0,
    "errors": 0,
    "duration_ms": 2024542.0
+  },
+  "2026-10-14": {
+   "calls": 4,
+   "cost": 0.0,
+   "errors": 1,
+   "duration_ms": 1450804.0
   }
  },
  "herdrBots": {
   "work": {
-   "calls": 243,
+   "calls": 247,
    "cost": 0.0,
-   "errors": 3
+   "errors": 4
   }
  }
 }
