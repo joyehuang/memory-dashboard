@@ -1,28 +1,28 @@
 {
- "generatedAt": "2026-10-15 09:00:03",
+ "generatedAt": "2026-10-16 09:00:03",
  "totals": {
   "pi": {
-   "tokens": 5461151305,
+   "tokens": 5465359799,
    "cost": 4121.2182,
-   "turns": 25017,
+   "turns": 25038,
    "sessions": 180,
-   "input": 585756598,
-   "output": 10354842,
-   "cacheRead": 4806467171,
-   "reasoning": 4063614,
+   "input": 587160215,
+   "output": 10360789,
+   "cacheRead": 4809266101,
+   "reasoning": 4065867,
    "costIn": 3672.2712,
    "costOut": 228.164,
    "costCache": 58.7676,
    "cacheRate": 89.1
   },
   "claude": {
-   "tokens": 3075739992,
-   "turns": 12368,
-   "sessions": 2749,
-   "input": 127123,
-   "output": 18292531,
-   "cacheRead": 3016877224,
-   "cacheWrite": 40443114,
+   "tokens": 3077720963,
+   "turns": 12399,
+   "sessions": 2787,
+   "input": 127185,
+   "output": 18317740,
+   "cacheRead": 3018741003,
+   "cacheWrite": 40535035,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -955,18 +955,32 @@
    "cacheRate": 87.3
   },
   "2026-10-15": {
-   "input": 2077417,
-   "output": 11570,
-   "cacheRead": 13738962,
+   "input": 3481034,
+   "output": 17517,
+   "cacheRead": 16537892,
    "cacheWrite": 0,
-   "reasoning": 2786,
-   "tokens": 15827949,
+   "reasoning": 5039,
+   "tokens": 20036443,
    "cost": 0.0,
    "costIn": 0.0,
    "costOut": 0.0,
    "costCache": 0.0,
-   "turns": 23,
-   "cacheRate": 86.9
+   "turns": 28,
+   "cacheRate": 82.6
+  },
+  "2026-10-16": {
+   "input": 0,
+   "output": 0,
+   "cacheRead": 0,
+   "cacheWrite": 0,
+   "reasoning": 0,
+   "tokens": 0,
+   "cost": 0.0,
+   "costIn": 0.0,
+   "costOut": 0.0,
+   "costCache": 0.0,
+   "turns": 16,
+   "cacheRate": 0
   }
  },
  "claudeDaily": {
@@ -1149,6 +1163,15 @@
    "tokens": 9663572,
    "turns": 128,
    "cacheRate": 100.0
+  },
+  "2026-10-15": {
+   "input": 62,
+   "output": 25209,
+   "cacheRead": 1863779,
+   "cacheWrite": 91921,
+   "tokens": 1980971,
+   "turns": 31,
+   "cacheRate": 100.0
   }
  },
  "models": {
@@ -1201,12 +1224,12 @@
    "cacheRate": 81.0
   },
   "claude/claude-sonnet-5-5": {
-   "tokens": 140151175,
+   "tokens": 144359669,
    "cost": 0.0,
-   "calls": 486,
-   "cacheRead": 115265979,
-   "input": 24600995,
-   "cacheRate": 82.4
+   "calls": 507,
+   "cacheRead": 118064909,
+   "input": 26004612,
+   "cacheRate": 81.9
   },
   "anthropic/claude-sonnet-5.5": {
    "tokens": 87703536,
@@ -1319,10 +1342,10 @@
    "cacheRate": 100.0
   },
   "claude-sonnet-5-5": {
-   "tokens": 2141263,
-   "calls": 36,
-   "input": 72,
-   "cacheRead": 2010096,
+   "tokens": 4122234,
+   "calls": 67,
+   "input": 134,
+   "cacheRead": 3873875,
    "cacheRate": 100.0
   },
   "<synthetic>": {
@@ -9937,6 +9960,14 @@
   {
    "date": "2026-10-15",
    "text": "03:27 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 处理 10-14 日报告警，确认仍是暂停所致 | 下一步: 等你决定是否恢复日报周报"
+  },
+  {
+   "date": "2026-10-15",
+   "text": "15:08 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 收到 Claude 登录链接邮件，未点击，已标记处理 | 下一步: 等你确认是不是你发起的登录"
+  },
+  {
+   "date": "2026-10-15",
+   "text": "17:02 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 整理主群近 30 天群数据（消息、提问、周趋势、人员分布、时段） | 下一步: 无"
   }
  ],
  "mem0Ops": {
