@@ -1,28 +1,28 @@
 {
- "generatedAt": "2026-10-16 09:00:03",
+ "generatedAt": "2026-10-17 09:00:04",
  "totals": {
   "pi": {
-   "tokens": 5465359799,
-   "cost": 4121.2182,
-   "turns": 25038,
-   "sessions": 180,
-   "input": 587160215,
-   "output": 10360789,
-   "cacheRead": 4809266101,
-   "reasoning": 4065867,
-   "costIn": 3672.2712,
-   "costOut": 228.164,
-   "costCache": 58.7676,
+   "tokens": 5469471539,
+   "cost": 4122.7278,
+   "turns": 25125,
+   "sessions": 182,
+   "input": 587160291,
+   "output": 10379646,
+   "cacheRead": 4813140497,
+   "reasoning": 4072433,
+   "costIn": 3672.2713,
+   "costOut": 228.3526,
+   "costCache": 59.5425,
    "cacheRate": 89.1
   },
   "claude": {
-   "tokens": 3077720963,
-   "turns": 12399,
-   "sessions": 2787,
-   "input": 127185,
-   "output": 18317740,
-   "cacheRead": 3018741003,
-   "cacheWrite": 40535035,
+   "tokens": 3079722784,
+   "turns": 12432,
+   "sessions": 2714,
+   "input": 127251,
+   "output": 18335558,
+   "cacheRead": 3020595594,
+   "cacheWrite": 40664381,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -33,14 +33,14 @@
    "chars": 0
   },
   "herdr": {
-   "calls": 247,
+   "calls": 70,
    "cost": 0.0,
-   "errors": 4,
+   "errors": 1,
    "sessions": 4,
    "teamRuns": 0,
    "teamActive": 0,
-   "avgDurationSec": 59.7,
-   "errorRate": 1.6
+   "avgDurationSec": 90.5,
+   "errorRate": 1.4
   }
  },
  "daily": {
@@ -969,18 +969,18 @@
    "cacheRate": 82.6
   },
   "2026-10-16": {
-   "input": 0,
-   "output": 0,
-   "cacheRead": 0,
-   "cacheWrite": 0,
-   "reasoning": 0,
-   "tokens": 0,
-   "cost": 0.0,
-   "costIn": 0.0,
-   "costOut": 0.0,
-   "costCache": 0.0,
-   "turns": 16,
-   "cacheRate": 0
+   "input": 76,
+   "output": 18857,
+   "cacheRead": 3874396,
+   "cacheWrite": 218411,
+   "reasoning": 6566,
+   "tokens": 4111740,
+   "cost": 1.5096287000000004,
+   "costIn": 0.00015199999999999995,
+   "costOut": 0.18857000000000002,
+   "costCache": 0.7748792,
+   "turns": 103,
+   "cacheRate": 100.0
   }
  },
  "claudeDaily": {
@@ -1172,6 +1172,24 @@
    "tokens": 1980971,
    "turns": 31,
    "cacheRate": 100.0
+  },
+  "2026-10-16": {
+   "input": 10,
+   "output": 1659,
+   "cacheRead": 215006,
+   "cacheWrite": 58313,
+   "tokens": 274988,
+   "turns": 5,
+   "cacheRate": 100.0
+  },
+  "2026-10-17": {
+   "input": 56,
+   "output": 16159,
+   "cacheRead": 1639585,
+   "cacheWrite": 71033,
+   "tokens": 1726833,
+   "turns": 28,
+   "cacheRate": 100.0
   }
  },
  "models": {
@@ -1226,17 +1244,17 @@
   "claude/claude-sonnet-5-5": {
    "tokens": 144359669,
    "cost": 0.0,
-   "calls": 507,
+   "calls": 558,
    "cacheRead": 118064909,
    "input": 26004612,
    "cacheRate": 81.9
   },
   "anthropic/claude-sonnet-5.5": {
-   "tokens": 87703536,
-   "cost": 56.40518130000001,
-   "calls": 256,
-   "cacheRead": 71223269,
-   "input": 6145,
+   "tokens": 91815276,
+   "cost": 57.91481,
+   "calls": 292,
+   "cacheRead": 75097665,
+   "input": 6221,
    "cacheRate": 100.0
   },
   "anthropic/claude-opus-5.5": {
@@ -1342,10 +1360,10 @@
    "cacheRate": 100.0
   },
   "claude-sonnet-5-5": {
-   "tokens": 4122234,
-   "calls": 67,
-   "input": 134,
-   "cacheRead": 3873875,
+   "tokens": 6124055,
+   "calls": 100,
+   "input": 200,
+   "cacheRead": 5728466,
    "cacheRate": 100.0
   },
   "<synthetic>": {
@@ -9968,6 +9986,14 @@
   {
    "date": "2026-10-15",
    "text": "17:02 `2026-10-10T02-06-35-583Z_01a1238f-e63f-749f-9f7f-247a0b232a08.jsonl` 📌 状态: 整理主群近 30 天群数据（消息、提问、周趋势、人员分布、时段） | 下一步: 无"
+  },
+  {
+   "date": "2026-10-16",
+   "text": "19:01 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: 响应 hi 并说明空回复自动重试 | 下一步: 等用户说明要检查的具体事项"
+  },
+  {
+   "date": "2026-10-16",
+   "text": "19:08 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: 恢复QQ NapCat、补起cloudflared与agent-mail自启 | 下一步: 查qq.joyehuang.app的Vercel 404"
   }
  ],
  "mem0Ops": {
@@ -10002,53 +10028,11 @@
   "2026-10-09": 4
  },
  "herdrDaily": {
-  "2026-09-16": {
-   "calls": 28,
-   "cost": 0.0,
-   "errors": 0,
-   "duration_ms": 1482143.0
-  },
-  "2026-09-17": {
-   "calls": 27,
-   "cost": 0.0,
-   "errors": 2,
-   "duration_ms": 1197962.0
-  },
-  "2026-09-18": {
-   "calls": 18,
-   "cost": 0.0,
-   "errors": 0,
-   "duration_ms": 759921.0
-  },
-  "2026-09-22": {
-   "calls": 30,
-   "cost": 0.0,
-   "errors": 1,
-   "duration_ms": 2598978.0
-  },
-  "2026-09-23": {
-   "calls": 16,
-   "cost": 0.0,
-   "errors": 0,
-   "duration_ms": 410347.0
-  },
-  "2026-09-24": {
-   "calls": 22,
-   "cost": 0.0,
-   "errors": 0,
-   "duration_ms": 886813.0
-  },
-  "2026-10-08": {
-   "calls": 10,
-   "cost": 0.0,
-   "errors": 0,
-   "duration_ms": 94502.0
-  },
   "2026-10-09": {
-   "calls": 28,
+   "calls": 2,
    "cost": 0.0,
    "errors": 0,
-   "duration_ms": 1049973.0
+   "duration_ms": 75614.0
   },
   "2026-10-10": {
    "calls": 24,
@@ -10077,9 +10061,9 @@
  },
  "herdrBots": {
   "work": {
-   "calls": 247,
+   "calls": 70,
    "cost": 0.0,
-   "errors": 4
+   "errors": 1
   }
  }
 }
