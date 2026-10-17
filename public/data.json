@@ -1,28 +1,28 @@
 {
- "generatedAt": "2026-10-17 09:00:04",
+ "generatedAt": "2026-10-18 09:00:04",
  "totals": {
   "pi": {
-   "tokens": 5469471539,
-   "cost": 4122.7278,
-   "turns": 25125,
+   "tokens": 5471730487,
+   "cost": 4124.7726,
+   "turns": 25142,
    "sessions": 182,
-   "input": 587160291,
-   "output": 10379646,
-   "cacheRead": 4813140497,
-   "reasoning": 4072433,
-   "costIn": 3672.2713,
-   "costOut": 228.3526,
-   "costCache": 59.5425,
+   "input": 587160335,
+   "output": 10386949,
+   "cacheRead": 4814730657,
+   "reasoning": 4073339,
+   "costIn": 3672.2714,
+   "costOut": 228.4256,
+   "costCache": 59.8605,
    "cacheRate": 89.1
   },
   "claude": {
-   "tokens": 3079722784,
-   "turns": 12432,
-   "sessions": 2714,
-   "input": 127251,
-   "output": 18335558,
-   "cacheRead": 3020595594,
-   "cacheWrite": 40664381,
+   "tokens": 3080707413,
+   "turns": 12447,
+   "sessions": 2637,
+   "input": 127281,
+   "output": 18345223,
+   "cacheRead": 3021486820,
+   "cacheWrite": 40748089,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -981,6 +981,20 @@
    "costCache": 0.7748792,
    "turns": 103,
    "cacheRate": 100.0
+  },
+  "2026-10-18": {
+   "input": 44,
+   "output": 7303,
+   "cacheRead": 1590160,
+   "cacheWrite": 661441,
+   "reasoning": 906,
+   "tokens": 2258948,
+   "cost": 2.0447525,
+   "costIn": 8.800000000000001e-05,
+   "costOut": 0.07303,
+   "costCache": 0.31803200000000004,
+   "turns": 17,
+   "cacheRate": 100.0
   }
  },
  "claudeDaily": {
@@ -1183,12 +1197,12 @@
    "cacheRate": 100.0
   },
   "2026-10-17": {
-   "input": 56,
-   "output": 16159,
-   "cacheRead": 1639585,
-   "cacheWrite": 71033,
-   "tokens": 1726833,
-   "turns": 28,
+   "input": 86,
+   "output": 25824,
+   "cacheRead": 2530811,
+   "cacheWrite": 154741,
+   "tokens": 2711462,
+   "turns": 43,
    "cacheRate": 100.0
   }
  },
@@ -1250,11 +1264,11 @@
    "cacheRate": 81.9
   },
   "anthropic/claude-sonnet-5.5": {
-   "tokens": 91815276,
-   "cost": 57.91481,
-   "calls": 292,
-   "cacheRead": 75097665,
-   "input": 6221,
+   "tokens": 94074224,
+   "cost": 59.95956249999998,
+   "calls": 309,
+   "cacheRead": 76687825,
+   "input": 6265,
    "cacheRate": 100.0
   },
   "anthropic/claude-opus-5.5": {
@@ -1332,10 +1346,10 @@
  },
  "claudeModels": {
   "claude-opus-5-5": {
-   "tokens": 2375759957,
-   "calls": 8266,
-   "input": 16580,
-   "cacheRead": 2337093443,
+   "tokens": 2376744586,
+   "calls": 8281,
+   "input": 16610,
+   "cacheRead": 2337984669,
    "cacheRate": 100.0
   },
   "claude-opus-5": {
@@ -9994,6 +10008,26 @@
   {
    "date": "2026-10-16",
    "text": "19:08 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: 恢复QQ NapCat、补起cloudflared与agent-mail自启 | 下一步: 查qq.joyehuang.app的Vercel 404"
+  },
+  {
+   "date": "2026-10-18",
+   "text": "02:58 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: DeepSeek官方key接入CPA，本地与公网均测通 | 下一步: 按需把QQbot等客户端指向CPA"
+  },
+  {
+   "date": "2026-10-18",
+   "text": "02:59 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: CPA只保留deepseek-flash并验证 | 下一步: 按需把客户端指向CPA"
+  },
+  {
+   "date": "2026-10-18",
+   "text": "03:00 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: 生成新key与baseurl并公网验证 | 下一步: 等用户使用或要求限定为纯flash"
+  },
+  {
+   "date": "2026-10-18",
+   "text": "03:01 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: 移除gpt-6.1-sol，仅保留deepseek-flash | 下一步: 等用户使用或新指示"
+  },
+  {
+   "date": "2026-10-18",
+   "text": "03:22 `2026-10-16T07-59-33-044Z_01a143b9-32b4-7628-b6c7-204962be5f6b.jsonl` 📌 状态: 确认CPA已支持Anthropic /v1/messages并测通 | 下一步: 等用户用Claude Code实测"
   }
  ],
  "mem0Ops": {
