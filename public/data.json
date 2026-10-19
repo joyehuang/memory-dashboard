@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-19 09:00:04",
+ "generatedAt": "2026-10-20 09:00:08",
  "totals": {
   "pi": {
    "tokens": 5471730487,
@@ -16,13 +16,13 @@
    "cacheRate": 89.1
   },
   "claude": {
-   "tokens": 3080914721,
-   "turns": 12451,
+   "tokens": 3082165047,
+   "turns": 12471,
    "sessions": 2536,
-   "input": 127289,
-   "output": 18345955,
-   "cacheRead": 3021667710,
-   "cacheWrite": 40773767,
+   "input": 127329,
+   "output": 18353323,
+   "cacheRead": 3022815287,
+   "cacheWrite": 40869108,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -1213,6 +1213,15 @@
    "tokens": 207308,
    "turns": 4,
    "cacheRate": 100.0
+  },
+  "2026-10-20": {
+   "input": 40,
+   "output": 7368,
+   "cacheRead": 1147577,
+   "cacheWrite": 95341,
+   "tokens": 1250326,
+   "turns": 20,
+   "cacheRate": 100.0
   }
  },
  "models": {
@@ -1383,10 +1392,10 @@
    "cacheRate": 100.0
   },
   "claude-sonnet-5-5": {
-   "tokens": 6331363,
-   "calls": 104,
-   "input": 208,
-   "cacheRead": 5909356,
+   "tokens": 7581689,
+   "calls": 124,
+   "input": 248,
+   "cacheRead": 7056933,
    "cacheRate": 100.0
   },
   "<synthetic>": {
