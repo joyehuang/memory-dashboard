@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06 09:00:01",
+ "generatedAt": "2026-11-07 09:00:02",
  "totals": {
   "pi": {
    "tokens": 5489628715,
@@ -16,13 +16,13 @@
    "cacheRate": 89.2
   },
   "claude": {
-   "tokens": 129070138,
-   "turns": 1029,
-   "sessions": 852,
-   "input": 2052,
-   "output": 633840,
-   "cacheRead": 125068866,
-   "cacheWrite": 3365380,
+   "tokens": 82791801,
+   "turns": 749,
+   "sessions": 758,
+   "input": 1480,
+   "output": 403547,
+   "cacheRead": 78643279,
+   "cacheWrite": 3743495,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -1068,15 +1068,6 @@
   }
  },
  "claudeDaily": {
-  "2026-10-06": {
-   "input": 726,
-   "output": 258048,
-   "cacheRead": 48682887,
-   "cacheWrite": 420603,
-   "tokens": 49362264,
-   "turns": 361,
-   "cacheRate": 100.0
-  },
   "2026-10-07": {
    "input": 772,
    "output": 251645,
@@ -1159,12 +1150,21 @@
    "cacheRate": 100.0
   },
   "2026-11-05": {
-   "input": 40,
-   "output": 5532,
-   "cacheRead": 438325,
-   "cacheWrite": 215860,
-   "tokens": 659757,
-   "turns": 28,
+   "input": 48,
+   "output": 6028,
+   "cacheRead": 481705,
+   "cacheWrite": 287068,
+   "tokens": 774849,
+   "turns": 36,
+   "cacheRate": 100.0
+  },
+  "2026-11-06": {
+   "input": 146,
+   "output": 27259,
+   "cacheRead": 2213920,
+   "cacheWrite": 727510,
+   "tokens": 2968835,
+   "turns": 73,
    "cacheRate": 100.0
   }
  },
@@ -1308,22 +1308,22 @@
  },
  "claudeModels": {
   "claude-opus-5-5": {
-   "tokens": 119500715,
-   "calls": 860,
-   "input": 1730,
-   "cacheRead": 116288622,
+   "tokens": 70138451,
+   "calls": 499,
+   "input": 1004,
+   "cacheRead": 67605735,
    "cacheRate": 100.0
   },
   "claude-sonnet-5-5": {
-   "tokens": 9569423,
-   "calls": 161,
-   "input": 322,
-   "cacheRead": 8780244,
+   "tokens": 12653350,
+   "calls": 238,
+   "input": 476,
+   "cacheRead": 11037544,
    "cacheRate": 100.0
   },
   "<synthetic>": {
    "tokens": 0,
-   "calls": 8,
+   "calls": 12,
    "input": 0,
    "cacheRead": 0,
    "cacheRate": 0
