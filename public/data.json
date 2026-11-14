@@ -1,18 +1,18 @@
 {
- "generatedAt": "2026-11-14 09:00:02",
+ "generatedAt": "2026-11-15 09:00:06",
  "totals": {
   "pi": {
-   "tokens": 5496664583,
-   "cost": 4143.8106,
-   "turns": 25385,
+   "tokens": 5503790482,
+   "cost": 4144.841,
+   "turns": 25421,
    "sessions": 191,
-   "input": 588761651,
-   "output": 10474627,
-   "cacheRead": 4832820928,
-   "reasoning": 4104399,
-   "costIn": 3674.6736,
-   "costOut": 229.2322,
-   "costCache": 62.8027,
+   "input": 589406920,
+   "output": 10498054,
+   "cacheRead": 4839278131,
+   "reasoning": 4116440,
+   "costIn": 3675.1695,
+   "costOut": 229.3774,
+   "costCache": 63.1921,
    "cacheRate": 89.1
   },
   "claude": {
@@ -1067,18 +1067,32 @@
    "cacheRate": 100.0
   },
   "2026-11-14": {
-   "input": 1600968,
-   "output": 28083,
-   "cacheRead": 5406817,
+   "input": 1852898,
+   "output": 46663,
+   "cacheRead": 10487892,
    "cacheWrite": 0,
-   "reasoning": 15904,
-   "tokens": 7035868,
-   "cost": 3.017585775,
-   "costIn": 2.401452,
-   "costOut": 0.21062250000000005,
-   "costCache": 0.4055112749999999,
-   "turns": 83,
-   "cacheRate": 77.2
+   "reasoning": 25377,
+   "tokens": 12387453,
+   "cost": 3.9159113999999997,
+   "costIn": 2.779347,
+   "costOut": 0.3499725000000002,
+   "costCache": 0.7865918999999999,
+   "turns": 110,
+   "cacheRate": 85.0
+  },
+  "2026-11-15": {
+   "input": 393339,
+   "output": 4847,
+   "cacheRead": 1376128,
+   "cacheWrite": 0,
+   "reasoning": 2568,
+   "tokens": 1774314,
+   "cost": 0.13207486799999998,
+   "costIn": 0.11800169999999999,
+   "costOut": 0.005816399999999999,
+   "costCache": 0.008256768,
+   "turns": 9,
+   "cacheRate": 77.8
   }
  },
  "claudeDaily": {
@@ -1254,6 +1268,14 @@
    "input": 1281309,
    "cacheRate": 92.4
   },
+  "antigravity/gemini-4-hydrogen": {
+   "tokens": 12387453,
+   "cost": 3.9159113999999997,
+   "calls": 98,
+   "cacheRead": 10487892,
+   "input": 1852898,
+   "cacheRate": 85.0
+  },
   "Qwen/Qwen3.8-Flash": {
    "tokens": 8425945,
    "cost": 0.10615634999999997,
@@ -1261,14 +1283,6 @@
    "cacheRead": 7198336,
    "input": 1165006,
    "cacheRate": 86.1
-  },
-  "antigravity/gemini-4-hydrogen": {
-   "tokens": 7035868,
-   "cost": 3.017585775,
-   "calls": 71,
-   "cacheRead": 5406817,
-   "input": 1600968,
-   "cacheRate": 77.2
   },
   "moonshotai/Kimi-K3": {
    "tokens": 3737122,
@@ -1285,6 +1299,14 @@
    "cacheRead": 2755072,
    "input": 272179,
    "cacheRate": 91.0
+  },
+  "deepseek-flash": {
+   "tokens": 1774314,
+   "cost": 0.13207486799999998,
+   "calls": 9,
+   "cacheRead": 1376128,
+   "input": 393339,
+   "cacheRate": 77.8
   },
   "deepseek-v4-pro": {
    "tokens": 1391209,
@@ -10170,6 +10192,18 @@
   {
    "date": "2026-11-14",
    "text": "01:09 `2026-11-13T13-43-29-856Z_01a1d526-2740-7258-9552-7d760c349f43.jsonl` 📌 状态: 确认 magpie Linux 无头模式与配置迁移方案 | 下一步: 在 tc-runner 创建 joye 用户并安装基础运行环境"
+  },
+  {
+   "date": "2026-11-14",
+   "text": "17:27 `2026-11-13T13-43-29-856Z_01a1d526-2740-7258-9552-7d760c349f43.jsonl` 📌 状态: 完成 tc-runner 全量环境搭建、数据同步与离线验收 | 下一步: 等用户确认立即切流量或先拉起 QQ NapCat 扫码"
+  },
+  {
+   "date": "2026-11-15",
+   "text": "05:31 `2026-11-13T13-43-29-856Z_01a1d526-2740-7258-9552-7d760c349f43.jsonl` 📌 状态: 收窄迁移范围至个人线并确认模型需 Google AI Studio key | 下一步: 等用户提供 Google AI Studio API key"
+  },
+  {
+   "date": "2026-11-15",
+   "text": "05:35 `2026-11-13T13-43-29-856Z_01a1d526-2740-7258-9552-7d760c349f43.jsonl` 📌 状态: 已删除 tc-runner 上 qqbot/metabot 等非个人线并按用户要求给出杂志/Google key 配置步骤 | 下一步: 等用户在服务器配好 magpie 后切换主 Pi 流量"
   }
  ],
  "mem0Ops": {
