@@ -1,28 +1,28 @@
 {
- "generatedAt": "2026-11-15 09:00:06",
+ "generatedAt": "2026-11-22 06:37:42",
  "totals": {
   "pi": {
-   "tokens": 5503790482,
-   "cost": 4144.841,
-   "turns": 25421,
+   "tokens": 5496325178,
+   "cost": 4143.5354,
+   "turns": 25375,
    "sessions": 191,
-   "input": 589406920,
-   "output": 10498054,
-   "cacheRead": 4839278131,
-   "reasoning": 4116440,
-   "costIn": 3675.1695,
-   "costOut": 229.3774,
-   "costCache": 63.1921,
+   "input": 588589851,
+   "output": 10473961,
+   "cacheRead": 4832653989,
+   "reasoning": 4104026,
+   "costIn": 3674.4159,
+   "costOut": 229.2272,
+   "costCache": 62.7902,
    "cacheRate": 89.1
   },
   "claude": {
-   "tokens": 25775661,
-   "turns": 394,
-   "sessions": 92,
-   "input": 776,
-   "output": 175078,
-   "cacheRead": 23768183,
-   "cacheWrite": 1831624,
+   "tokens": 83712121,
+   "turns": 768,
+   "sessions": 760,
+   "input": 1540,
+   "output": 410118,
+   "cacheRead": 79506434,
+   "cacheWrite": 3794029,
    "cacheRate": 100.0
   },
   "mem0": {
@@ -36,7 +36,7 @@
    "calls": 0,
    "cost": 0.0,
    "errors": 0,
-   "sessions": 4,
+   "sessions": 0,
    "teamRuns": 0,
    "teamActive": 0,
    "avgDurationSec": 0.0,
@@ -65,10 +65,10 @@
    "cacheWrite": 0,
    "reasoning": 76252,
    "tokens": 53956768,
-   "cost": 10.276765383200006,
-   "costIn": 4.451664899999987,
+   "cost": 10.276765383200003,
+   "costIn": 4.4516649,
    "costOut": 0.852602,
-   "costCache": 4.972498483200009,
+   "costCache": 4.972498483200002,
    "turns": 378,
    "cacheRate": 97.5
   },
@@ -79,10 +79,10 @@
    "cacheWrite": 0,
    "reasoning": 220727,
    "tokens": 54277053,
-   "cost": 4.291103185999998,
-   "costIn": 1.1932065400000003,
-   "costOut": 0.8662473499999999,
-   "costCache": 2.231649296,
+   "cost": 4.291103185999995,
+   "costIn": 1.1932065399999998,
+   "costOut": 0.8662473499999996,
+   "costCache": 2.231649295999996,
    "turns": 715,
    "cacheRate": 98.0
   },
@@ -94,9 +94,9 @@
    "reasoning": 75507,
    "tokens": 28536571,
    "cost": 0.14814984800000008,
-   "costIn": 0.029219120000000005,
-   "costOut": 0.04001284000000004,
-   "costCache": 0.07891788799999999,
+   "costIn": 0.029219119999999998,
+   "costOut": 0.04001283999999998,
+   "costCache": 0.0789178879999999,
    "turns": 353,
    "cacheRate": 99.3
   },
@@ -149,9 +149,9 @@
    "cacheWrite": 0,
    "reasoning": 36099,
    "tokens": 114654318,
-   "cost": 0.4572812999999997,
+   "cost": 0.45728129999999984,
    "costIn": 0.09125381999999996,
-   "costOut": 0.04729340000000004,
+   "costOut": 0.047293400000000055,
    "costCache": 0.31873407999999975,
    "turns": 485,
    "cacheRate": 99.4
@@ -163,10 +163,10 @@
    "cacheWrite": 0,
    "reasoning": 294522,
    "tokens": 75537065,
-   "cost": 2.372126813599994,
-   "costIn": 0.7757805799999998,
-   "costOut": 0.44717103999999963,
-   "costCache": 1.1491751935999992,
+   "cost": 2.3721268136000004,
+   "costIn": 0.7757805800000002,
+   "costOut": 0.44717104000000013,
+   "costCache": 1.1491751935999985,
    "turns": 795,
    "cacheRate": 98.1
   },
@@ -177,10 +177,10 @@
    "cacheWrite": 0,
    "reasoning": 83275,
    "tokens": 59314268,
-   "cost": 1.0429350559999995,
+   "cost": 1.0429350559999997,
    "costIn": 0.49717800000000045,
-   "costOut": 0.14794559999999987,
-   "costCache": 0.39781145599999973,
+   "costOut": 0.14794559999999993,
+   "costCache": 0.3978114559999998,
    "turns": 577,
    "cacheRate": 96.2
   },
@@ -191,10 +191,10 @@
    "cacheWrite": 0,
    "reasoning": 6686,
    "tokens": 4237755,
-   "cost": 0.059948347999999985,
+   "cost": 0.059948348000000005,
    "costIn": 0.019522800000000007,
-   "costOut": 0.01150446,
-   "costCache": 0.028921087999999998,
+   "costOut": 0.011504460000000003,
+   "costCache": 0.028921088,
    "turns": 56,
    "cacheRate": 97.9
   },
@@ -219,10 +219,10 @@
    "cacheWrite": 0,
    "reasoning": 34876,
    "tokens": 93869089,
-   "cost": 1.585900348,
+   "cost": 1.5859003480000002,
    "costIn": 0.8306946999999999,
    "costOut": 0.12588839999999996,
-   "costCache": 0.6293172480000002,
+   "costCache": 0.6293172479999999,
    "turns": 604,
    "cacheRate": 96.0
   },
@@ -261,10 +261,10 @@
    "cacheWrite": 0,
    "reasoning": 115395,
    "tokens": 76032228,
-   "cost": 2.6461018800000016,
-   "costIn": 1.96010078,
+   "cost": 2.646101880000003,
+   "costIn": 1.9601007799999994,
    "costOut": 0.21845934,
-   "costCache": 0.46754175999999986,
+   "costCache": 0.4675417600000002,
    "turns": 842,
    "cacheRate": 88.2
   },
@@ -275,9 +275,9 @@
    "cacheWrite": 0,
    "reasoning": 74386,
    "tokens": 59501407,
-   "cost": 1.7141218920000008,
-   "costIn": 1.1334341399999999,
-   "costOut": 0.07097331999999995,
+   "cost": 1.7141218920000014,
+   "costIn": 1.1334341400000003,
+   "costOut": 0.07097331999999992,
    "costCache": 0.5097144319999998,
    "turns": 698,
    "cacheRate": 79.6
@@ -291,7 +291,7 @@
    "tokens": 48184671,
    "cost": 1.0030458400000006,
    "costIn": 0.42896910000000027,
-   "costOut": 0.047752900000000015,
+   "costOut": 0.04775290000000001,
    "costCache": 0.5263238399999997,
    "turns": 556,
    "cacheRate": 88.1
@@ -303,10 +303,10 @@
    "cacheWrite": 0,
    "reasoning": 56510,
    "tokens": 95376108,
-   "cost": 2.8375275460000005,
-   "costIn": 1.5295785200000025,
-   "costOut": 0.05609437000000002,
-   "costCache": 1.2518546559999997,
+   "cost": 2.837527545999999,
+   "costIn": 1.5295785199999998,
+   "costOut": 0.05609437,
+   "costCache": 1.2518546560000003,
    "turns": 457,
    "cacheRate": 84.7
   },
@@ -332,9 +332,9 @@
    "reasoning": 70269,
    "tokens": 63373445,
    "cost": 1.6210489900000002,
-   "costIn": 0.782370899999999,
-   "costOut": 0.04739424999999999,
-   "costCache": 0.7912838399999998,
+   "costIn": 0.7823708999999989,
+   "costOut": 0.047394250000000006,
+   "costCache": 0.7912838399999997,
    "turns": 574,
    "cacheRate": 83.5
   },
@@ -345,10 +345,10 @@
    "cacheWrite": 0,
    "reasoning": 21047,
    "tokens": 6069782,
-   "cost": 0.23419087999999996,
-   "costIn": 0.16481549999999992,
-   "costOut": 0.012012500000000002,
-   "costCache": 0.057362879999999984,
+   "cost": 0.23419088000000005,
+   "costIn": 0.1648154999999999,
+   "costOut": 0.012012499999999994,
+   "costCache": 0.05736288,
    "turns": 111,
    "cacheRate": 63.5
   },
@@ -359,10 +359,10 @@
    "cacheWrite": 0,
    "reasoning": 151571,
    "tokens": 128419313,
-   "cost": 2.888957159999995,
-   "costIn": 1.1652169500000011,
-   "costOut": 0.09207524999999996,
-   "costCache": 1.6316649599999997,
+   "cost": 2.88895716,
+   "costIn": 1.1652169499999994,
+   "costOut": 0.09207525000000011,
+   "costCache": 1.6316649600000008,
    "turns": 1139,
    "cacheRate": 87.0
   },
@@ -373,10 +373,10 @@
    "cacheWrite": 0,
    "reasoning": 84563,
    "tokens": 276980638,
-   "cost": 6.1855534349999965,
-   "costIn": 2.4445175249999997,
-   "costOut": 0.0800317499999998,
-   "costCache": 3.6610041600000045,
+   "cost": 6.185553434999997,
+   "costIn": 2.4445175250000015,
+   "costOut": 0.08003175000000004,
+   "costCache": 3.661004160000003,
    "turns": 1034,
    "cacheRate": 88.2
   },
@@ -387,10 +387,10 @@
    "cacheWrite": 0,
    "reasoning": 102528,
    "tokens": 38803496,
-   "cost": 1.2155933599999995,
-   "costIn": 0.7360031999999999,
-   "costOut": 0.04759399999999998,
-   "costCache": 0.4319961599999997,
+   "cost": 1.2155933599999993,
+   "costIn": 0.7360032000000003,
+   "costOut": 0.04759399999999992,
+   "costCache": 0.4319961599999998,
    "turns": 495,
    "cacheRate": 74.6
   },
@@ -401,10 +401,10 @@
    "cacheWrite": 0,
    "reasoning": 42511,
    "tokens": 111577224,
-   "cost": 2.200065309999997,
+   "cost": 2.2000653099999976,
    "costIn": 0.6047218500000003,
-   "costOut": 0.04535050000000001,
-   "costCache": 1.5499929599999995,
+   "costOut": 0.045350500000000016,
+   "costCache": 1.5499929599999993,
    "turns": 755,
    "cacheRate": 92.8
   },
@@ -415,9 +415,9 @@
    "cacheWrite": 0,
    "reasoning": 38022,
    "tokens": 64445871,
-   "cost": 43.069218405,
-   "costIn": 35.690521025,
-   "costOut": 7.374710500000006,
+   "cost": 43.06921840500004,
+   "costIn": 35.690521024999974,
+   "costOut": 7.374710499999998,
    "costCache": 0.00398688,
    "turns": 571,
    "cacheRate": 93.6
@@ -429,9 +429,9 @@
    "cacheWrite": 0,
    "reasoning": 102457,
    "tokens": 88630095,
-   "cost": 88.81625392900004,
-   "costIn": 75.68707483500002,
-   "costOut": 13.117762709999996,
+   "cost": 88.81625392899994,
+   "costIn": 75.68707483499999,
+   "costOut": 13.117762710000004,
    "costCache": 0.011416384,
    "turns": 602,
    "cacheRate": 90.8
@@ -443,9 +443,9 @@
    "cacheWrite": 0,
    "reasoning": 133260,
    "tokens": 124132089,
-   "cost": 138.46556999999996,
-   "costIn": 123.10032000000011,
-   "costOut": 15.365250000000005,
+   "cost": 138.46556999999993,
+   "costIn": 123.10032000000007,
+   "costOut": 15.365250000000007,
    "costCache": 0.0,
    "turns": 686,
    "cacheRate": 90.1
@@ -457,9 +457,9 @@
    "cacheWrite": 0,
    "reasoning": 186212,
    "tokens": 234682306,
-   "cost": 296.7231000000002,
-   "costIn": 275.62324999999987,
-   "costOut": 21.099850000000007,
+   "cost": 296.72309999999993,
+   "costIn": 275.6232500000002,
+   "costOut": 21.099849999999982,
    "costCache": 0.0,
    "turns": 1014,
    "cacheRate": 88.2
@@ -471,9 +471,9 @@
    "cacheWrite": 0,
    "reasoning": 101451,
    "tokens": 140824208,
-   "cost": 130.65985597439993,
-   "costIn": 122.16668587999989,
-   "costOut": 8.341462599999987,
+   "cost": 130.65985597440007,
+   "costIn": 122.16668588,
+   "costOut": 8.341462599999995,
    "costCache": 0.15170749439999998,
    "turns": 764,
    "cacheRate": 86.9
@@ -485,9 +485,9 @@
    "cacheWrite": 0,
    "reasoning": 79111,
    "tokens": 102273001,
-   "cost": 186.93996999999982,
-   "costIn": 177.67271999999986,
-   "costOut": 9.26725,
+   "cost": 186.93996999999996,
+   "costIn": 177.67272000000014,
+   "costOut": 9.267249999999997,
    "costCache": 0.0,
    "turns": 373,
    "cacheRate": 82.6
@@ -555,9 +555,9 @@
    "cacheWrite": 0,
    "reasoning": 102975,
    "tokens": 153564910,
-   "cost": 232.85158000000004,
-   "costIn": 223.12928,
-   "costOut": 9.722300000000006,
+   "cost": 232.8515800000003,
+   "costIn": 223.12927999999994,
+   "costOut": 9.722300000000002,
    "costCache": 0.0,
    "turns": 420,
    "cacheRate": 85.5
@@ -569,9 +569,9 @@
    "cacheWrite": 0,
    "reasoning": 70777,
    "tokens": 200129114,
-   "cost": 306.2703400000001,
-   "costIn": 294.0303400000003,
-   "costOut": 12.239999999999995,
+   "cost": 306.27033999999963,
+   "costIn": 294.03034,
+   "costOut": 12.240000000000006,
    "costCache": 0.0,
    "turns": 637,
    "cacheRate": 85.3
@@ -583,9 +583,9 @@
    "cacheWrite": 0,
    "reasoning": 73337,
    "tokens": 118402548,
-   "cost": 138.90924000000007,
-   "costIn": 132.06614000000002,
-   "costOut": 6.843100000000001,
+   "cost": 138.90924000000012,
+   "costIn": 132.06614000000005,
+   "costOut": 6.8431,
    "costCache": 0.0,
    "turns": 208,
    "cacheRate": 88.8
@@ -597,9 +597,9 @@
    "cacheWrite": 0,
    "reasoning": 46389,
    "tokens": 80346947,
-   "cost": 33.601463332000016,
-   "costIn": 31.906948300000003,
-   "costOut": 1.538887,
+   "cost": 33.601463332,
+   "costIn": 31.906948300000007,
+   "costOut": 1.5388869999999994,
    "costCache": 0.15562803199999994,
    "turns": 350,
    "cacheRate": 89.1
@@ -611,9 +611,9 @@
    "cacheWrite": 0,
    "reasoning": 109547,
    "tokens": 73833510,
-   "cost": 11.318376558399999,
-   "costIn": 10.743695680000002,
-   "costOut": 0.40438676000000007,
+   "cost": 11.318376558399997,
+   "costIn": 10.74369568,
+   "costOut": 0.40438676,
    "costCache": 0.17029411839999994,
    "turns": 332,
    "cacheRate": 94.6
@@ -625,9 +625,9 @@
    "cacheWrite": 0,
    "reasoning": 7705,
    "tokens": 62312752,
-   "cost": 82.43092,
-   "costIn": 79.40247000000002,
-   "costOut": 3.02845,
+   "cost": 82.43092000000001,
+   "costIn": 79.40247000000004,
+   "costOut": 3.0284499999999994,
    "costCache": 0.0,
    "turns": 245,
    "cacheRate": 87.2
@@ -653,9 +653,9 @@
    "cacheWrite": 0,
    "reasoning": 39486,
    "tokens": 135993926,
-   "cost": 254.26894000000013,
-   "costIn": 247.28803999999982,
-   "costOut": 6.980899999999998,
+   "cost": 254.26894000000001,
+   "costIn": 247.28804000000005,
+   "costOut": 6.980900000000006,
    "costCache": 0.0,
    "turns": 390,
    "cacheRate": 81.8
@@ -709,8 +709,8 @@
    "cacheWrite": 1720503,
    "reasoning": 21800,
    "tokens": 62660573,
-   "cost": 74.99249,
-   "costIn": 63.117736000000036,
+   "cost": 74.99248999999999,
+   "costIn": 63.11773600000011,
    "costOut": 2.3428400000000003,
    "costCache": 0.9293990000000001,
    "turns": 161,
@@ -723,8 +723,8 @@
    "cacheWrite": 2157346,
    "reasoning": 10925,
    "tokens": 10520769,
-   "cost": 13.081551999999997,
-   "costIn": 0.017780000000000004,
+   "cost": 13.081552000000006,
+   "costIn": 0.017779999999999997,
    "costOut": 0.6113599999999999,
    "costCache": 1.6656819999999997,
    "turns": 64,
@@ -737,10 +737,10 @@
    "cacheWrite": 7573811,
    "reasoning": 37798,
    "tokens": 53395451,
-   "cost": 35.82273480000001,
-   "costIn": 0.009743999999999985,
-   "costOut": 1.8521400000000006,
-   "costCache": 9.137300800000007,
+   "cost": 35.8227348,
+   "costIn": 0.009744000000000037,
+   "costOut": 1.8521399999999997,
+   "costCache": 9.137300800000006,
    "turns": 288,
    "cacheRate": 100.0
   },
@@ -821,9 +821,9 @@
    "cacheWrite": 0,
    "reasoning": 808,
    "tokens": 12644216,
-   "cost": 26.42216000000001,
-   "costIn": 25.778360000000006,
-   "costOut": 0.6437999999999999,
+   "cost": 26.42215999999999,
+   "costIn": 25.778360000000013,
+   "costOut": 0.6438,
    "costCache": 0.0,
    "turns": 68,
    "cacheRate": 79.6
@@ -835,8 +835,8 @@
    "cacheWrite": 0,
    "reasoning": 7378,
    "tokens": 31971377,
-   "cost": 51.05789000000001,
-   "costIn": 48.50813999999998,
+   "cost": 51.057889999999986,
+   "costIn": 48.50814,
    "costOut": 2.549750000000001,
    "costCache": 0.0,
    "turns": 217,
@@ -877,9 +877,9 @@
    "cacheWrite": 6943786,
    "reasoning": 23202,
    "tokens": 32730300,
-   "cost": 20.666529700000005,
+   "cost": 20.666529700000012,
    "costIn": 0.0006679999999999987,
-   "costOut": 0.7351300000000002,
+   "costOut": 0.7351300000000001,
    "costCache": 2.5712667000000002,
    "turns": 136,
    "cacheRate": 100.0
@@ -1067,42 +1067,46 @@
    "cacheRate": 100.0
   },
   "2026-11-14": {
-   "input": 1852898,
-   "output": 46663,
-   "cacheRead": 10487892,
+   "input": 1429168,
+   "output": 27417,
+   "cacheRead": 5239878,
    "cacheWrite": 0,
-   "reasoning": 25377,
-   "tokens": 12387453,
-   "cost": 3.9159113999999997,
-   "costIn": 2.779347,
-   "costOut": 0.3499725000000002,
-   "costCache": 0.7865918999999999,
-   "turns": 110,
-   "cacheRate": 85.0
-  },
-  "2026-11-15": {
-   "input": 393339,
-   "output": 4847,
-   "cacheRead": 1376128,
-   "cacheWrite": 0,
-   "reasoning": 2568,
-   "tokens": 1774314,
-   "cost": 0.13207486799999998,
-   "costIn": 0.11800169999999999,
-   "costOut": 0.005816399999999999,
-   "costCache": 0.008256768,
-   "turns": 9,
-   "cacheRate": 77.8
+   "reasoning": 15531,
+   "tokens": 6696463,
+   "cost": 2.7423703500000003,
+   "costIn": 2.143752,
+   "costOut": 0.20562750000000005,
+   "costCache": 0.3929908499999999,
+   "turns": 73,
+   "cacheRate": 78.6
   }
  },
  "claudeDaily": {
+  "2026-10-07": {
+   "input": 772,
+   "output": 251645,
+   "cacheRead": 58189507,
+   "cacheWrite": 1074179,
+   "tokens": 59516103,
+   "turns": 383,
+   "cacheRate": 100.0
+  },
+  "2026-10-08": {
+   "input": 16,
+   "output": 4623,
+   "cacheRead": 1596540,
+   "cacheWrite": 469408,
+   "tokens": 2070587,
+   "turns": 8,
+   "cacheRate": 100.0
+  },
   "2026-10-12": {
-   "input": 70,
-   "output": 9935,
-   "cacheRead": 1984837,
-   "cacheWrite": 101598,
-   "tokens": 2096440,
-   "turns": 35,
+   "input": 256,
+   "output": 46807,
+   "cacheRead": 8913299,
+   "cacheWrite": 703210,
+   "tokens": 9663572,
+   "turns": 128,
    "cacheRate": 100.0
   },
   "2026-10-15": {
@@ -1178,19 +1182,19 @@
    "cacheRate": 100.0
   },
   "2026-11-14": {
-   "input": 270,
-   "output": 64671,
-   "cacheRead": 11839413,
-   "cacheWrite": 233328,
-   "tokens": 12137682,
-   "turns": 129,
+   "input": 60,
+   "output": 6571,
+   "cacheRead": 863155,
+   "cacheWrite": 50534,
+   "tokens": 920320,
+   "turns": 19,
    "cacheRate": 100.0
   }
  },
  "models": {
   "gpt-6-astra": {
    "tokens": 2943452046,
-   "cost": 3865.7108600000092,
+   "cost": 3865.7108600000242,
    "calls": 10145,
    "cacheRead": 2574292992,
    "input": 364806046,
@@ -1198,7 +1202,7 @@
   },
   "z-ai/glm-5.3-flash": {
    "tokens": 823030663,
-   "cost": 19.216709334999926,
+   "cost": 19.216709334999987,
    "calls": 5647,
    "cacheRead": 711069312,
    "input": 110166897,
@@ -1206,7 +1210,7 @@
   },
   "deepseek-v4-flash": {
    "tokens": 588166997,
-   "cost": 4.586975047199995,
+   "cost": 4.586975047199977,
    "calls": 3334,
    "cacheRead": 568458624,
    "input": 18021811,
@@ -1214,7 +1218,7 @@
   },
   "cc/deepseek-v4-flash": {
    "tokens": 440973979,
-   "cost": 10.469012068000003,
+   "cost": 10.469012068000007,
    "calls": 3472,
    "cacheRead": 408959744,
    "input": 30734321,
@@ -1246,7 +1250,7 @@
   },
   "anthropic/claude-sonnet-5.5": {
    "tokens": 111972452,
-   "cost": 75.97997679999996,
+   "cost": 75.9799768,
    "calls": 473,
    "cacheRead": 89371279,
    "input": 6613,
@@ -1254,7 +1258,7 @@
   },
   "anthropic/claude-opus-5.5": {
    "tokens": 38906719,
-   "cost": 39.88244139999997,
+   "cost": 39.8824414,
    "calls": 252,
    "cacheRead": 32552397,
    "input": 13288,
@@ -1268,14 +1272,6 @@
    "input": 1281309,
    "cacheRate": 92.4
   },
-  "antigravity/gemini-4-hydrogen": {
-   "tokens": 12387453,
-   "cost": 3.9159113999999997,
-   "calls": 98,
-   "cacheRead": 10487892,
-   "input": 1852898,
-   "cacheRate": 85.0
-  },
   "Qwen/Qwen3.8-Flash": {
    "tokens": 8425945,
    "cost": 0.10615634999999997,
@@ -1283,6 +1279,14 @@
    "cacheRead": 7198336,
    "input": 1165006,
    "cacheRate": 86.1
+  },
+  "antigravity/gemini-4-hydrogen": {
+   "tokens": 6696463,
+   "cost": 2.7423703500000003,
+   "calls": 61,
+   "cacheRead": 5239878,
+   "input": 1429168,
+   "cacheRate": 78.6
   },
   "moonshotai/Kimi-K3": {
    "tokens": 3737122,
@@ -1300,17 +1304,9 @@
    "input": 272179,
    "cacheRate": 91.0
   },
-  "deepseek-flash": {
-   "tokens": 1774314,
-   "cost": 0.13207486799999998,
-   "calls": 9,
-   "cacheRead": 1376128,
-   "input": 393339,
-   "cacheRate": 77.8
-  },
   "deepseek-v4-pro": {
    "tokens": 1391209,
-   "cost": 0.09757821399999998,
+   "cost": 0.09757821400000001,
    "calls": 60,
    "cacheRead": 1241728,
    "input": 84992,
@@ -1324,7 +1320,7 @@
    "input": 44389,
    "cacheRate": 95.3
   },
-  "claude-opus-4-8": {
+  "claude-opus-5-5": {
    "tokens": 0,
    "cost": 0.0,
    "calls": 2,
@@ -1332,7 +1328,7 @@
    "input": 0,
    "cacheRate": 0
   },
-  "claude-opus-5-5": {
+  "claude-opus-4-8": {
    "tokens": 0,
    "cost": 0.0,
    "calls": 2,
@@ -1350,6 +1346,13 @@
   }
  },
  "claudeModels": {
+  "claude-opus-5-5": {
+   "tokens": 70138451,
+   "calls": 499,
+   "input": 1004,
+   "cacheRead": 67605735,
+   "cacheRate": 100.0
+  },
   "claude-sonnet-5-5": {
    "tokens": 13528650,
    "calls": 255,
@@ -1357,12 +1360,12 @@
    "cacheRead": 11871503,
    "cacheRate": 100.0
   },
-  "claude-opus-5-5": {
-   "tokens": 12247011,
-   "calls": 127,
-   "input": 260,
-   "cacheRead": 11896680,
-   "cacheRate": 100.0
+  "claude-haiku-4-5-20251001": {
+   "tokens": 45020,
+   "calls": 2,
+   "input": 20,
+   "cacheRead": 29196,
+   "cacheRate": 99.9
   },
   "<synthetic>": {
    "tokens": 0,
@@ -10195,15 +10198,91 @@
   },
   {
    "date": "2026-11-14",
-   "text": "17:27 `2026-11-13T13-43-29-856Z_01a1d526-2740-7258-9552-7d760c349f43.jsonl` 📌 状态: 完成 tc-runner 全量环境搭建、数据同步与离线验收 | 下一步: 等用户确认立即切流量或先拉起 QQ NapCat 扫码"
+   "text": "07:19 `(unknown)` 📌 状态: PILINUXOK | 下一步: 见上"
   },
   {
    "date": "2026-11-15",
-   "text": "05:31 `2026-11-13T13-43-29-856Z_01a1d526-2740-7258-9552-7d760c349f43.jsonl` 📌 状态: 收窄迁移范围至个人线并确认模型需 Google AI Studio key | 下一步: 等用户提供 Google AI Studio API key"
+   "text": "16:35 `(unknown)` 📌 状态: GOOGLEHYDROGENOK 当前模型：google/models/gemini4hydrogen（pro | 下一步: 见上"
   },
   {
    "date": "2026-11-15",
-   "text": "05:35 `2026-11-13T13-43-29-856Z_01a1d526-2740-7258-9552-7d760c349f43.jsonl` 📌 状态: 已删除 tc-runner 上 qqbot/metabot 等非个人线并按用户要求给出杂志/Google key 配置步骤 | 下一步: 等用户在服务器配好 magpie 后切换主 Pi 流量"
+   "text": "16:38 `(unknown)` 📌 状态: User enjoys watching Formula 1 (F1) racing and is a fan | 下一步: 见上"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:28 `2026-11-21T18-27-51-375Z_01a1ff5d-5dcf-7461-a151-e6cca5e2d6d2.jsonl` 📌 状态: 完成 2026-11-01 qqbot 日报告警核查并 ack 落盘 | 下一步: 若需补查请在部署 qqbot 的主机运行 report:delivery --status"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:28 `2026-11-21T18-27-51-375Z_01a1ff5d-5dcf-7461-a151-e6cca5e2d6d2.jsonl` 📌 状态: 完成 2026-10-26~11-01 qqbot 周报告警核查并 ack 落盘 | 下一步: 若需补查请在部署 qqbot 的主机运行 report:delivery --status"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:30 `2026-11-21T18-27-51-375Z_01a1ff5d-5dcf-7461-a151-e6cca5e2d6d2.jsonl` 📌 状态: 核对 tc-runner 当前运行环境与 Telegram 积压事件现状 | 下一步: 等用户指示如何处理剩余 12 条 qqbot 历史告警及后续安排"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:31 `2026-11-21T18-30-46-468Z_01a1ff60-09c3-7473-b1df-f02e18e8301c.jsonl` 📌 状态: 核查2026-11-02日报缺失仓库阻塞并完成通知签收 | 下一步: 在qqbot宿主机检查投递状态并恢复日报"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:31 `2026-11-21T18-30-46-468Z_01a1ff60-09c3-7473-b1df-f02e18e8301c.jsonl` 📌 状态: 核查2026-11-03日报缺失仓库阻塞并完成通知签收 | 下一步: 在qqbot宿主机检查投递状态并恢复日报"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:34 `2026-11-21T18-33-41-773Z_01a1ff62-b68d-7656-b2a4-6528ee0aed02.jsonl` 📌 状态: 已核查缺失 qqbot 仓库并完成告警签收 | 下一步: 如需恢复需在原部署主机执行 report:delivery 检查"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:34 `2026-11-21T18-33-41-773Z_01a1ff62-b68d-7656-b2a4-6528ee0aed02.jsonl` 📌 状态: 已核查缺失 qqbot 仓库并完成 11-05 告警签收 | 下一步: 如需恢复需在原部署主机执行 report:delivery 检查"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:37 `2026-11-21T18-36-36-904Z_01a1ff65-62a8-739e-b1eb-cffa9ef564f8.jsonl` 📌 状态: 核查 11-06 日报失败，本机无 qqbot 仓库已记录 ack | 下一步: 在 Mac mini 核对 report:delivery 状态并恢复"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:37 `2026-11-21T18-36-36-904Z_01a1ff65-62a8-739e-b1eb-cffa9ef564f8.jsonl` 📌 状态: 核查 11-07 日报失败，本机无 qqbot 仓库已记录 ack | 下一步: 在 Mac mini 核对 report:delivery 状态并恢复"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:40 `2026-11-21T18-39-32-217Z_01a1ff68-0f79-766c-9bf3-9a77e7ea3818.jsonl` 📌 状态: 核查2026-11-08日报通知并确认本机无qqbot仓库后完成ack | 下一步: 如需补发需在原部署主机处理"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:40 `2026-11-21T18-39-32-217Z_01a1ff68-0f79-766c-9bf3-9a77e7ea3818.jsonl` 📌 状态: 核查2026-11-02至11-08周报通知并确认本机无qqbot仓库后完成ack | 下一步: 如需补发需在原部署主机处理"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:40 `2026-11-21T18-39-32-217Z_01a1ff68-0f79-766c-9bf3-9a77e7ea3818.jsonl` 📌 状态: 核查2026-11-09日报通知并确认本机无qqbot仓库后完成ack | 下一步: 如需补发需在原部署主机处理"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:43 `2026-11-21T18-42-27-390Z_01a1ff6a-bbbe-7072-9bd9-13e8e108f749.jsonl` 📌 状态: 核实本机无 qqbot 仓库并已 ack 2026-11-10 日报通知 | 下一步: 若需恢复该日报请在含 qqbot 的主机操作"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:43 `2026-11-21T18-42-27-390Z_01a1ff6a-bbbe-7072-9bd9-13e8e108f749.jsonl` 📌 状态: 已核实无 qqbot 仓库并 ack 2026-11-11 日报通知 | 下一步: 若需恢复请在含 qqbot 的主机处理"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:46 `2026-11-21T18-45-22-446Z_01a1ff6d-678e-74f7-b03e-2df53b278cd6.jsonl` 📌 状态: 记录 2026-11-12 日报恢复阻塞（当前环境缺 ~/dev/qqbot）并完成事件签收 | 下一步: 在 Mac mini 执行 report:delivery 状态检查与恢复"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "19:46 `2026-11-21T18-45-22-446Z_01a1ff6d-678e-74f7-b03e-2df53b278cd6.jsonl` 📌 状态: 验证 mail-watch 自测邮件并完成事件签收 | 下一步: 无需进一步操作"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "20:30 `2026-11-21T19-29-14-553Z_01a1ff95-9138-7153-b8a1-36d3da893861.jsonl` 📌 状态: 在呢，刚上线。有什么事直接说 | 下一步: 见上"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "20:33 `2026-11-21T19-32-09-807Z_01a1ff98-3dcf-70c9-bb6d-fa807ad7aae5.jsonl` 📌 状态: 在呢，随时可以开始 | 下一步: 见上"
+  },
+  {
+   "date": "2026-11-21",
+   "text": "20:34 `2026-11-21T19-32-09-807Z_01a1ff98-3dcf-70c9-bb6d-fa807ad7aae5.jsonl` 📌 状态: 查明 pi 被反复重启根因并盘点 tc-runner 迁移失败项 | 下一步: 停止 Mac mini 侧重复重启脚本并逐项修复本机服务与凭据"
   }
  ],
  "mem0Ops": {
